@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tiger.dao.DesignbespeakDao">
+  <resultMap id="BaseResultMap" type="com.tiger.pojo.Designbespeak">
+    <id column="designbespeak_id" jdbcType="INTEGER" property="designbespeakId" />
+    <result column="designbespeak_username" jdbcType="VARCHAR" property="designbespeakUsername" />
+    <result column="designbespeak_tel" jdbcType="VARCHAR" property="designbespeakTel" />
+    <result column="designbespeak_time" jdbcType="TIMESTAMP" property="designbespeakTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    designbespeak_id, designbespeak_username, designbespeak_tel, designbespeak_time
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from designbespeak_t
+    where designbespeak_id = #{designbespeakId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAllDesignbespeak" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from designbespeak_t
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from designbespeak_t
+    where designbespeak_id = #{designbespeakId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.tiger.pojo.Designbespeak">
+    insert into designbespeak_t (designbespeak_id, designbespeak_username, 
+      designbespeak_tel, designbespeak_time)
+    values (#{designbespeakId,jdbcType=INTEGER}, #{designbespeakUsername,jdbcType=VARCHAR}, 
+      #{designbespeakTel,jdbcType=VARCHAR}, now())
+  </insert>
+  <insert id="insertSelective" parameterType="com.tiger.pojo.Designbespeak">
+    insert into designbespeak_t
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="designbespeakId != null">
+        designbespeak_id,
+      </if>
+      <if test="designbespeakUsername != null">
+        designbespeak_username,
+      </if>
+      <if test="designbespeakTel != null">
+        designbespeak_tel,
+      </if>
+      <if test="designbespeakTime != null">
+        designbespeak_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="designbespeakId != null">
+        #{designbespeakId,jdbcType=INTEGER},
+      </if>
+      <if test="designbespeakUsername != null">
+        #{designbespeakUsername,jdbcType=VARCHAR},
+      </if>
+      <if test="designbespeakTel != null">
+        #{designbespeakTel,jdbcType=VARCHAR},
+      </if>
+      <if test="designbespeakTime != null">
+        #{designbespeakTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.tiger.pojo.Designbespeak">
+    update designbespeak_t
+    <set>
+      <if test="designbespeakUsername != null">
+        designbespeak_username = #{designbespeakUsername,jdbcType=VARCHAR},
+      </if>
+      <if test="designbespeakTel != null">
+        designbespeak_tel = #{designbespeakTel,jdbcType=VARCHAR},
+      </if>
+      <if test="designbespeakTime != null">
+        designbespeak_time = #{designbespeakTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where designbespeak_id = #{designbespeakId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.tiger.pojo.Designbespeak">
+    update designbespeak_t
+    set designbespeak_username = #{designbespeakUsername,jdbcType=VARCHAR},
+      designbespeak_tel = #{designbespeakTel,jdbcType=VARCHAR},
+      designbespeak_time = #{designbespeakTime,jdbcType=TIMESTAMP}
+    where designbespeak_id = #{designbespeakId,jdbcType=INTEGER}
+  </update>
+</mapper>

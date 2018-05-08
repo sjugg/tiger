@@ -1,0 +1,209 @@
+@CHARSET "UTF-8";
+#decorationService_top{
+	width:100%;
+}
+#decorationService{
+	width:100%;
+	min-height:1000px;
+}
+#decorationService .decorationService_1{
+	width:100%;
+	min-height:1100px;
+	margin-top:30px;
+	float:left;
+}
+#decorationService .decorationService_1 .decorationService_1_title{
+	width:100%;
+	height:80px;
+}
+#decorationService .decorationService_1 .decorationService_1_title .top{
+	width:100%;
+	height:50px;
+}
+#decorationService .decorationService_1 .decorationService_1_title .top .text{
+	font-size:36px;
+	width:20%;
+	color:#222;
+	text-align:center;
+	float:left;
+}
+#decorationService .decorationService_1 .decorationService_1_title .top .line{
+	width:39.8%;
+	height:50px;
+	float:left;
+	
+}
+#decorationService .decorationService_1 .decorationService_1_title .top .line p{
+	border-top:1px solid #ccc;
+	width:30%;
+	margin-top:25px;
+}
+#decorationService .decorationService_1 .decorationService_1_title .top .line_1 p{
+	margin-left:70%;
+}
+#decorationService .decorationService_1 .decorationService_1_title .bottom{
+	width:100%;
+	height:50px;
+	text-align:center;
+	color:#5a5a5a;
+}
+#decorationService .decorationService_1 .decorationService_1_bottom{
+	width:100%;
+	height:1000px;
+	background:#f2f2f2;
+}
+#decorationService .decorationService_1 .decorationService_1_bottom .body{
+	width:94%;
+	margin:3%;
+	height:1000px;
+}
+#decorationService .decorationService_1 .decorationService_1_bottom .body li{
+	width:29%;
+	margin:20px 1.5%;
+	height:450px;
+	float:left;
+	padding:0.5%;
+}
+#decorationService .decorationService_1 .decorationService_1_bottom .body li img{
+	width:100%;
+}
+#decorationService .decorationService_1 .decorationService_1_bottom .body li .text{
+	height:120px;
+	width:98%;
+	margin:0 1%;
+	color:#5a5a5a;
+}
+#decorationService .decorationService_1 .decorationService_1_bottom .body li .text .title{
+	height:35px;
+	line-height:35px;
+	font-size:24px;
+	font-weight:bold;
+}
+#decorationService .decorationService_1 .decorationService_1_bottom .body li .text_1{
+	
+}
+#decorationService .decorationService_1 .decorationService_1_bottom .body li .text_2{
+	height:110px;
+	padding-top:10px;
+}
+#decorationService .decorationService_1 .decorationService_1_bottom .body li .text_3{
+	
+}
+#decorationService .decorationService_1 .decorationService_1_bottom .body li .text_4{
+	height:90px;
+	padding-top:30px;
+}
+#decorationService .decorationService_1 .decorationService_1_bottom .body li .text_5{
+	
+}
+#decorationService .decorationService_1 .decorationService_1_bottom .body li .text_6{
+	height:90px;
+	padding-top:30px;
+}
+
+#decorationService .decorationService_1 .decorationService_1_bottom .body li .line_2{
+	background:#fff;
+	width:225%;
+	height:2px;
+	position:relative;
+	top:-270px;
+	left:-56%;
+	filter:alpha(opacity:60); 
+	opacity:0.6;  
+	-moz-opacity:0.6;
+	-khtml-opacity: 0.6;
+}
+#decorationService .decorationService_1 .decorationService_1_bottom .body li .line_5{
+	background:#fff;
+	width:225%;
+	height:2px;
+	position:relative;
+	top:-55px;
+	left:-56%;
+	filter:alpha(opacity:60); 
+	opacity:0.6;  
+	-moz-opacity:0.6;
+	-khtml-opacity: 0.6;
+}
+#decorationService .decorationService_2{
+	width:100%;
+	min-height:350px;
+	margin-top:30px;
+	float:left;
+}
+#decorationService .decorationService_2 .decorationService_2_title{
+	width:100%;
+	height:80px;
+}
+#decorationService .decorationService_2 .decorationService_2_title .top{
+	width:100%;
+	height:50px;
+}
+#decorationService .decorationService_2 .decorationService_2_title .top .text{
+	font-size:36px;
+	width:25%;
+	color:#222;
+	text-align:center;
+	float:left;
+}
+#decorationService .decorationService_2 .decorationService_2_title .top .line{
+	width:37.3%;
+	height:50px;
+	float:left;
+	
+}
+#decorationService .decorationService_2 .decorationService_2_title .top .line p{
+	border-top:1px solid #ccc;
+	width:30%;
+	margin-top:25px;
+}
+#decorationService .decorationService_2 .decorationService_2_title .top .line_1 p{
+	margin-left:70%;
+}
+#decorationService .decorationService_2 .decorationService_2_title .bottom{
+	width:100%;
+	height:50px;
+	text-align:center;
+	color:#5a5a5a;
+}
+#decorationService .decorationService_2 .decorationService_2_bottom{
+	width:100%;
+	height:200px;
+}
+#decorationService .decorationService_2 .decorationService_2_bottom ul{
+	width:75%;
+	height:200px;
+	margin:0 auto;	
+	margin-top:40px;
+}
+#decorationService .decorationService_2 .decorationService_2_bottom li{
+	width:25%;
+	height:200px;
+	margin:0 auto;	
+	float:left;
+	margin:0 4%;
+	text-align:center;
+}
+#decorationService .decorationService_2 .decorationService_2_bottom li .img{
+	width:100%;
+	height:100px;
+	text-align:center;
+}
+#decorationService .decorationService_2 .decorationService_2_bottom li h2{
+	width:100%;
+	height:30px;
+	line-height:30px;
+	font-size:22px;
+	color:#5a5a5a;
+	text-align:center;
+}
+#decorationService .decorationService_2 .decorationService_2_bottom li p{
+	width:100%;
+	text-align:center;
+	font-size:14px;
+	color:#444;
+}
+
+
+
+

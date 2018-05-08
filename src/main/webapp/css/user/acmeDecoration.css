@@ -1,0 +1,102 @@
+@CHARSET "UTF-8";
+#acmeDecoration_top_photo img{
+	width:100%;
+	height:100%;
+}
+#acmeDecoration{
+	width:80%;
+	margin:0 auto;
+	background:#f2f2f2;
+	clear:both;
+	overflow:auto;
+	padding-bottom:50px;
+}
+#acmeDecoration .acmeDecoration_title{
+	height:130px;
+	width:100%;
+	background:#fff;	
+	padding-top:20px;
+}
+#acmeDecoration .acmeDecoration_title p.name{
+	height:50px;
+	line-height:50px;
+	font-size:26px;
+	color:#5a5a5a;
+	background:#fff;	
+}
+#acmeDecoration .acmeDecoration_title p.info{
+	height:22px;
+	line-height:22px;
+	font-size:16px;
+	color:#5a5a5a;
+	background:#fff;	
+}
+#acmeDecoration .acmeDecoration_content{
+	width:66%;
+	margin:0 auto;
+	margin-top:40px;
+}
+#acmeDecoration .acmeDecoration_content .step .pic{
+	width:100%;
+	text-align:center;
+	height:390px;
+	margin-top:20px;
+	float:left;
+}
+#acmeDecoration .acmeDecoration_content .step .pic img{
+	width:100%;
+	max-height:390px;
+}
+#acmeDecoration .acmeDecoration_content .step .line{
+	width:100%;
+	float:left;
+	line-height:20px;
+	height:20px;
+	margin:20px 0 0px 0;
+}
+#acmeDecoration .acmeDecoration_content .step .line p{
+    width:30px;
+    height:0px;
+    border-top:4px solid #4bc6ba;
+    
+}
+#acmeDecoration .acmeDecoration_content .step .name{
+	width:100%;
+	height:30px;
+	line-height:30px;
+	float:left;
+}
+#acmeDecoration .acmeDecoration_content .step .name p{
+    font-size:28px;
+    color:#5a5a5a;
+}
+#acmeDecoration .acmeDecoration_content .step .info{
+	width:100%;
+	float:left;
+    margin-top:8px;
+    min-height:20px;
+}
+#acmeDecoration .acmeDecoration_content .step .info p{
+    font-size:16px;
+    color:#5a5a5a;
+    line-height:25px;
+    float:left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

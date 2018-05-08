@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tiger.dao.HousestyleDao">
+  <resultMap id="BaseResultMap" type="com.tiger.pojo.Housestyle">
+    <id column="housestyle_id" jdbcType="INTEGER" property="housestyleId" />
+    <result column="housestyle_name" jdbcType="VARCHAR" property="housestyleName" />
+    <result column="housestyle_info" jdbcType="VARCHAR" property="housestyleInfo" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    housestyle_id, housestyle_name, housestyle_info
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from housestyle_t
+    where housestyle_id = #{housestyleId,jdbcType=INTEGER}
+  </select>
+   <select id="selectAllHousestyle" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from housestyle_t
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from housestyle_t
+    where housestyle_id = #{housestyleId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.tiger.pojo.Housestyle">
+    insert into housestyle_t (housestyle_id, housestyle_name, housestyle_info
+      )
+    values (#{housestyleId,jdbcType=INTEGER}, #{housestyleName,jdbcType=VARCHAR}, #{housestyleInfo,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.tiger.pojo.Housestyle">
+    insert into housestyle_t
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="housestyleId != null">
+        housestyle_id,
+      </if>
+      <if test="housestyleName != null">
+        housestyle_name,
+      </if>
+      <if test="housestyleInfo != null">
+        housestyle_info,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="housestyleId != null">
+        #{housestyleId,jdbcType=INTEGER},
+      </if>
+      <if test="housestyleName != null">
+        #{housestyleName,jdbcType=VARCHAR},
+      </if>
+      <if test="housestyleInfo != null">
+        #{housestyleInfo,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.tiger.pojo.Housestyle">
+    update housestyle_t
+    <set>
+      <if test="housestyleName != null">
+        housestyle_name = #{housestyleName,jdbcType=VARCHAR},
+      </if>
+      <if test="housestyleInfo != null">
+        housestyle_info = #{housestyleInfo,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where housestyle_id = #{housestyleId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.tiger.pojo.Housestyle">
+    update housestyle_t
+    set housestyle_name = #{housestyleName,jdbcType=VARCHAR},
+      housestyle_info = #{housestyleInfo,jdbcType=VARCHAR}
+    where housestyle_id = #{housestyleId,jdbcType=INTEGER}
+  </update>
+</mapper>

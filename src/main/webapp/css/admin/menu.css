@@ -1,0 +1,64 @@
+@CHARSET "UTF-8";
+body {
+	scrollbar-base-color: #40658c;
+	scrollbar-arrow-color: #FFFFFF;
+	scrollbar-shadow-color: #6190c1;
+	padding: 0px;
+	margin: auto;
+	text-align: center;
+	background-color:#40658c;
+}
+table.left {
+	width:99%;
+	height:100%;
+	border:0;
+}
+table.left td {
+	padding-left:3px;
+	padding-top:8px;
+	line-height: 1.5; 
+}
+dl.bitem {
+	width: 148px;
+	margin: 0px 0px 5px 4px;
+}
+dl.bitem dt {
+	background: url(../images/menubg_up.png) no-repeat;
+	height: 26px;
+	line-height: 26px;
+	text-align: center;
+	cursor: pointer;
+}
+dl.bitem dt b {
+	color:#0d4b8d;
+}
+dl.bitem dd {
+	padding: 3px 3px 3px 3px;
+	background-color: #fff;
+}
+ul {
+	padding-top: 3px;
+}
+li {
+	height: 22px;
+}
+.sitemu li {
+	padding: 0px 0px 0px 22px;
+	line-height: 24px;
+	background: url(../images/circle.png) no-repeat 10px 9px;
+}
+.sitemu li:hover {
+	background: url(../images/triangle.png) no-repeat 10px 7px;
+}
+.sitemu li.selected{
+	font-weight:bold;
+	background: url(../images/triangle.png) no-repeat 10px 7px;
+}
+.sitemu li a {
+	color:#000000;
+	text-decoration:none;
+	font-size:9pt;
+}
+.sitemu li a:hover {
+	color:red;
+}

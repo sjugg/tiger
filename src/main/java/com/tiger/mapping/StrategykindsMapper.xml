@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tiger.dao.StrategykindsDao">
+  <resultMap id="BaseResultMap" type="com.tiger.pojo.Strategykinds">
+    <id column="strategykinds_id" jdbcType="INTEGER" property="strategykindsId" />
+    <result column="strategykinds_name" jdbcType="VARCHAR" property="strategykindsName" />
+    <result column="strategykinds_info" jdbcType="VARCHAR" property="strategykindsInfo" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    strategykinds_id, strategykinds_name, strategykinds_info
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from strategykinds_t
+    where strategykinds_id = #{strategykindsId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAllStrategykinds" parameterType="com.tiger.pojo.Strategykinds" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from strategykinds_t
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from strategykinds_t
+    where strategykinds_id = #{strategykindsId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.tiger.pojo.Strategykinds">
+    insert into strategykinds_t (strategykinds_id, strategykinds_name, 
+      strategykinds_info)
+    values (#{strategykindsId,jdbcType=INTEGER}, #{strategykindsName,jdbcType=VARCHAR}, 
+      #{strategykindsInfo,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.tiger.pojo.Strategykinds">
+    insert into strategykinds_t
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="strategykindsId != null">
+        strategykinds_id,
+      </if>
+      <if test="strategykindsName != null">
+        strategykinds_name,
+      </if>
+      <if test="strategykindsInfo != null">
+        strategykinds_info,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="strategykindsId != null">
+        #{strategykindsId,jdbcType=INTEGER},
+      </if>
+      <if test="strategykindsName != null">
+        #{strategykindsName,jdbcType=VARCHAR},
+      </if>
+      <if test="strategykindsInfo != null">
+        #{strategykindsInfo,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.tiger.pojo.Strategykinds">
+    update strategykinds_t
+    <set>
+      <if test="strategykindsName != null">
+        strategykinds_name = #{strategykindsName,jdbcType=VARCHAR},
+      </if>
+      <if test="strategykindsInfo != null">
+        strategykinds_info = #{strategykindsInfo,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where strategykinds_id = #{strategykindsId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.tiger.pojo.Strategykinds">
+    update strategykinds_t
+    set strategykinds_name = #{strategykindsName,jdbcType=VARCHAR},
+      strategykinds_info = #{strategykindsInfo,jdbcType=VARCHAR}
+    where strategykinds_id = #{strategykindsId,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -1,0 +1,131 @@
+@CHARSET "UTF-8";
+#body{
+	background:#f2f2f2;
+}
+#recruit_photo{
+	width:100%;
+	height:656px;
+}
+#recruit_photo img{
+	width:100%;
+	height:100%;
+}
+#recruit{
+	width:100%;
+	min-height:656px;
+	margin-bottom:80px;
+	margin-top:10px;
+}
+#recruit .title{
+	width:100%;
+	height:60px;
+	line-height:60px;
+}
+#recruit .title h1{
+	width:50%;
+	height:60px;
+	line-height:60px;
+	float:left;
+	font-size:22px;
+	color:#5a5a5a;
+}
+#recruit .title span{
+	width:49%;
+	height:60px;
+	line-height:60px;
+	float:right;
+	font-size:16px;
+	color:#5a5a5a;
+	text-align:right;
+}
+#recruit .list{
+	width:100%;
+}
+#recruit .list table{
+	width:100%;
+	border-collapse:collapse;
+	background:#fff;
+}
+#recruit .list table tr{
+	width:100%;
+	height:50px;
+	line-height:50px;
+	border:1px solid #ecebeb;
+}
+
+#recruit .list table tr.title{
+	background:#ecebeb;
+}
+#recruit .list table tr .th-1,
+#recruit .list table tr .td-1{
+	width:46%;
+	text-indent:2em;
+}
+#recruit .list table tr th,
+#recruit .list table tr td{
+	border:none;
+	border-bottom:1px solid #ecebeb\9;
+}
+#recruit .list table tr .th-2,
+#recruit .list table tr .td-2{
+	width:18%;
+	text-align:center;
+	
+}
+#recruit .list table tr .th-3,
+#recruit .list table tr .td-3{
+	width:18%;
+	text-align:center;
+}
+#recruit .list table tr .th-4,
+#recruit .list table tr .td-4{
+	width:18%;
+	text-align:center;
+}
+#recruit .list table .detail{
+	width:100%;
+	height:100px;
+}
+#recruit .list table .detail_block{
+}
+#recruit .list table .detail td{
+	width:100%;
+	height:100px;
+	padding-bottom:10px;
+	
+}
+#recruit .list table tr td.td-4 img:hover{
+	cursor:pointer;
+}
+#recruit .list table .detail .info {
+	margin-top:10px;
+	margin-left:3em;
+}
+#recruit .list table .detail .info h1{
+	height:35px;
+	line-height:35px;
+	font-size:16px;
+}
+
+#recruit .list table .detail .info p{
+	height:25px;
+	line-height:25px;
+	font-size:14x;
+}
+#recruit .list table .detail .line{
+	border-bottom:1px solid #ecebeb;
+	margin-top:5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

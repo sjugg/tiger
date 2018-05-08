@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tiger.dao.HomeDressDao">
+  <resultMap id="HomeDressResultMap" type="com.tiger.pojo.HomeDress">
+    <id column="id"  property="id" />
+     <result column="name"  property="name" />
+    <result column="tel"  property="tel" />
+   
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, name, tel
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="HomeDressResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from homedress_t
+    where id = #{id}
+  </select>
+  <select id="selectAllAdmin" parameterType="com.tiger.pojo.HomeDress" resultMap="HomeDressResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from homedress_t
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from homedress_t
+    where id = #{id}
+  </delete>
+  <insert id="insert" parameterType="com.tiger.pojo.HomeDress" >
+    insert into homedress_t (id,name,tel
+      )
+    values (#{id},#{name},#{tel}
+      )
+  </insert>
+  <select id="selectByTel" parameterType="java.lang.String" resultMap="HomeDressResultMap">
+  	select
+  	<include refid="Base_Column_List"/>
+  	from homedress_t
+  	where tel=#{tel}
+  </select>
+  </mapper>

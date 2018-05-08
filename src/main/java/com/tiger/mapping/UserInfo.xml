@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tiger.dao.UserInfoDao">
+  <resultMap id="UserInfoResultMap" type="com.tiger.pojo.UserInfo">
+    <id column="id"  property="id" />
+    <result column="tel"  property="tel" />
+    <result column="password"  property="password" />
+    <result column="name"  property="name" />
+    <result column="company"  property="company" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, tel, password, name
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="UserInfoResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from user_t
+    where id = #{id}
+  </select>
+  <select id="selectAllAdmin" parameterType="com.tiger.pojo.UserInfo" resultMap="UserInfoResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from user_t
+  </select>
+  <select id="getByPdAndTel" parameterType="com.tiger.pojo.UserInfo" resultMap="UserInfoResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from user_t
+    where tel=#{tel} and password=#{password}
+  </select>
+    <select id="getByTel" parameterType="com.tiger.pojo.UserInfo" resultMap="UserInfoResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from user_t
+    where tel=#{tel} 
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from user_t
+    where id = #{id}
+  </delete>
+  <insert id="insert" parameterType="com.tiger.pojo.UserInfo">
+    insert into user_t (id, tel, password, name
+      )
+    values (#{id}, #{tel}, #{password}, 
+      #{name})
+  </insert>
+  </mapper>

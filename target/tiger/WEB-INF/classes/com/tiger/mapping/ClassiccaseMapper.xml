@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tiger.dao.ClassiccaseDao">
+  <resultMap id="BaseResultMap" type="com.tiger.pojo.Classiccase">
+     <id column="classiccase_id" jdbcType="INTEGER" property="classiccaseId" />
+    <result column="classiccase_name" jdbcType="VARCHAR" property="classiccaseName" />
+    <result column="classiccase_info" jdbcType="VARCHAR" property="classiccaseInfo" />
+    <result column="classiccase_picture" jdbcType="VARCHAR" property="classiccasePicture" />
+    <result column="classiccase_casepicid" jdbcType="INTEGER" property="classiccaseCasepicid" />
+    <result column="classiccase_label" jdbcType="VARCHAR" property="classiccaseLabel" />
+    <result column="classiccase_style" jdbcType="VARCHAR" property="classiccaseStyle" />
+    <result column="classiccase_acreage" jdbcType="VARCHAR" property="classiccaseAcreage" />
+    <result column="classiccase_house_type" jdbcType="VARCHAR" property="classiccaseHouseType" />
+    <result column="classiccase_large" jdbcType="VARCHAR" property="classiccaseLarge" />
+    <result column="classiccase_readnum" jdbcType="INTEGER" property="classiccaseReadnum" />
+    <result column="classiccase_commentnum" jdbcType="INTEGER" property="classiccaseCommentnum" />
+    <result column="classiccase_index" jdbcType="INTEGER" property="classiccaseIndex" />
+    <result column="classiccase_parlour_type" jdbcType="VARCHAR" property="classiccaseParlourType" />
+    <result column="classiccase_kitchen_type" jdbcType="VARCHAR" property="classiccaseKitchenType" />
+    <result column="classiccase_toilet_type" jdbcType="VARCHAR" property="classiccaseToiletType" />
+		<collection property="casepicture" ofType="com.tiger.pojo.Casepicture">  
+            <id column="casepicture_id" jdbcType="INTEGER" property="casepictureId"></id>  
+            <result column="casepicture_picture" jdbcType="VARCHAR" property="casepicturePicture" />
+    		<result column="classiccase_id" jdbcType="INTEGER" property="classiccaseId" />
+    		<result column="casepicture_info" jdbcType="VARCHAR" property="casepictureInfo" />
+        </collection>
+  </resultMap>
+  <sql id="Base_Column_List">
+    classiccase_id, classiccase_name, classiccase_info, classiccase_picture, classiccase_casepicid, 
+    classiccase_label, classiccase_style, classiccase_acreage, classiccase_house_type, 
+    classiccase_large, classiccase_readnum, classiccase_commentnum, classiccase_index, 
+    classiccase_parlour_type, classiccase_kitchen_type, classiccase_toilet_type
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from classiccase_t
+    where classiccase_id = #{classiccaseId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAllClassiccase" parameterType="com.tiger.pojo.Classiccase" resultMap="BaseResultMap">
+    select 
+     classiccase_id, classiccase_name, classiccase_info, classiccase_picture, classiccase_casepicid, 
+    classiccase_label, classiccase_style, houseacreage_name as classiccase_acreage,  housetype_name as classiccase_house_type,
+    classiccase_large, classiccase_readnum, classiccase_commentnum, classiccase_index, 
+    classiccase_parlour_type, classiccase_kitchen_type, classiccase_toilet_type
+    
+    from 
+    classiccase_t,housetype_t,houseacreage_t
+    where classiccase_house_type = housetype_id and houseacreage_id = classiccase_acreage 
+  </select>
+   <select id="selectAllClassiccaseIndex" parameterType="com.tiger.pojo.Classiccase" resultMap="BaseResultMap">
+    select 
+    classiccase_id, classiccase_name, classiccase_info, classiccase_picture, classiccase_casepicid, 
+    classiccase_label, classiccase_style, houseacreage_name as classiccase_acreage,  housetype_name as classiccase_house_type ,
+    classiccase_large, classiccase_readnum, classiccase_commentnum, classiccase_index, 
+    classiccase_parlour_type, classiccase_kitchen_type, classiccase_toilet_type
+    
+    from 
+    classiccase_t,housetype_t,houseacreage_t
+    where classiccase_house_type = housetype_id and houseacreage_id = classiccase_acreage
+    and (classiccase_index != null or classiccase_index != '')
+  </select>
+   <select id="selectClassiccaseByAttribute" parameterType="com.tiger.pojo.Classiccase" resultMap="BaseResultMap">
+    select 
+  <include refid="Base_Column_List" />
+    from classiccase_t
+    <if test="classiccaseStyle != '' || classiccaseAcreage != '' || classiccaseHouseType != ''">
+    	where 
+    </if>
+    	<if test="classiccaseStyle != ''">
+    		classiccase_style = #{classiccaseStyle,jdbcType = VARCHAR}
+	    	<if test="classiccaseHouseType != ''">
+	    		and classiccase_house_type = #{classiccaseHouseType,jdbcType = VARCHAR}
+	    		<if test="classiccaseAcreage != ''">
+	    			and classiccase_acreage = #{classiccaseAcreage,jdbcType = VARCHAR}
+	    		</if>
+	    	</if>
+	    	<if test="classiccaseHouseType == ''">
+	    		<if test="classiccaseAcreage != ''">
+	    			and classiccase_acreage = #{classiccaseAcreage,jdbcType = VARCHAR}
+	    		</if>
+	    	</if>
+   		</if>
+   		<if test="classiccaseStyle == ''">
+	    	<if test="classiccaseHouseType != ''">
+	    		 classiccase_house_type = #{classiccaseHouseType,jdbcType = VARCHAR}
+	    		<if test="classiccaseAcreage != ''">
+	    			and classiccase_acreage = #{classiccaseAcreage,jdbcType = VARCHAR}
+	    		</if>
+	    	</if>
+	    	<if test="classiccaseHouseType == ''">
+	    		<if test="classiccaseAcreage != ''">
+	    			classiccase_acreage = #{classiccaseAcreage,jdbcType = VARCHAR}
+	    		</if>
+	    	</if>
+   		</if>
+  </select>
+  <select id="selectByClassiccaseId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    classiccase_t.classiccase_id,
+    classiccase_t.classiccase_name, 
+    classiccase_t.classiccase_info, 
+    classiccase_t.classiccase_picture, 
+    classiccase_t.classiccase_casepicid, 
+    classiccase_label, 
+    classiccase_t.classiccase_style, 
+    classiccase_t.classiccase_acreage, 
+    classiccase_t.classiccase_house_type,
+    classiccase_t.classiccase_large,
+    casepicture_t.casepicture_id,
+    casepicture_t.casepicture_picture,
+    casepicture_t.classiccase_id,
+    casepicture_t.casepicture_info
+    from classiccase_t,casepicture_t
+     where classiccase_t.classiccase_id = #{classiccaseId,jdbcType=INTEGER}
+
+    and classiccase_t.classiccase_id = casepicture_t.classiccase_id
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from classiccase_t
+    where classiccase_id = #{classiccaseId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.tiger.pojo.Classiccase" useGeneratedKeys="true">
+  	<selectKey resultType="java.lang.Integer" order="AFTER" keyProperty="classiccaseId">  
+          SELECT LAST_INSERT_ID() AS classiccaseId    
+    </selectKey> 
+    insert into classiccase_t (classiccase_id, classiccase_name, classiccase_info, 
+      classiccase_picture, classiccase_casepicid, 
+      classiccase_label, classiccase_style, classiccase_acreage, 
+      classiccase_house_type, classiccase_large, 
+      classiccase_readnum, classiccase_commentnum, 
+      classiccase_index, classiccase_parlour_type, 
+      classiccase_kitchen_type, classiccase_toilet_type
+      )
+    values (#{classiccaseId,jdbcType=INTEGER}, #{classiccaseName,jdbcType=VARCHAR}, #{classiccaseInfo,jdbcType=VARCHAR}, 
+      #{classiccasePicture,jdbcType=VARCHAR}, #{classiccaseCasepicid,jdbcType=INTEGER}, 
+      #{classiccaseLabel,jdbcType=VARCHAR}, #{classiccaseStyle,jdbcType=VARCHAR}, #{classiccaseAcreage,jdbcType=VARCHAR}, 
+      #{classiccaseHouseType,jdbcType=VARCHAR}, #{classiccaseLarge,jdbcType=VARCHAR}, 
+      #{classiccaseReadnum,jdbcType=INTEGER}, #{classiccaseCommentnum,jdbcType=INTEGER}, 
+      #{classiccaseIndex,jdbcType=INTEGER}, #{classiccaseParlourType,jdbcType=VARCHAR}, 
+      #{classiccaseKitchenType,jdbcType=VARCHAR}, #{classiccaseToiletType,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.tiger.pojo.Classiccase">
+    insert into classiccase_t
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="classiccaseId != null">
+        classiccase_id,
+      </if>
+      <if test="classiccaseName != null">
+        classiccase_name,
+      </if>
+      <if test="classiccaseInfo != null">
+        classiccase_info,
+      </if>
+      <if test="classiccasePicture != null">
+        classiccase_picture,
+      </if>
+      <if test="classiccaseCasepicid != null">
+        classiccase_casepicid,
+      </if>
+      <if test="classiccaseLabel != null">
+        classiccase_label,
+      </if>
+      <if test="classiccaseStyle != null">
+        classiccase_style,
+      </if>
+      <if test="classiccaseAcreage != null">
+        classiccase_acreage,
+      </if>
+      <if test="classiccaseHouseType != null">
+        classiccase_house_type,
+      </if>
+      <if test="classiccaseLarge != null">
+        classiccase_large,
+      </if>
+      <if test="classiccaseReadnum != null">
+        classiccase_readnum,
+      </if>
+      <if test="classiccaseCommentnum != null">
+        classiccase_commentnum,
+      </if>
+      <if test="classiccaseIndex != null">
+        classiccase_index,
+      </if>
+      <if test="classiccaseParlourType != null">
+        classiccase_parlour_type,
+      </if>
+      <if test="classiccaseKitchenType != null">
+        classiccase_kitchen_type,
+      </if>
+      <if test="classiccaseToiletType != null">
+        classiccase_toilet_type,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="classiccaseId != null">
+        #{classiccaseId,jdbcType=INTEGER},
+      </if>
+      <if test="classiccaseName != null">
+        #{classiccaseName,jdbcType=VARCHAR},
+      </if>
+      <if test="classiccaseInfo != null">
+        #{classiccaseInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="classiccasePicture != null">
+        #{classiccasePicture,jdbcType=VARCHAR},
+      </if>
+      <if test="classiccaseCasepicid != null">
+        #{classiccaseCasepicid,jdbcType=INTEGER},
+      </if>
+      <if test="classiccaseLabel != null">
+        #{classiccaseLabel,jdbcType=VARCHAR},
+      </if>
+      <if test="classiccaseStyle != null">
+        #{classiccaseStyle,jdbcType=VARCHAR},
+      </if>
+      <if test="classiccaseAcreage != null">
+        #{classiccaseAcreage,jdbcType=VARCHAR},
+      </if>
+      <if test="classiccaseHouseType != null">
+        #{classiccaseHouseType,jdbcType=VARCHAR},
+      </if>
+      <if test="classiccaseLarge != null">
+        #{classiccaseLarge,jdbcType=VARCHAR},
+      </if>
+      <if test="classiccaseReadnum != null">
+        #{classiccaseReadnum,jdbcType=INTEGER},
+      </if>
+      <if test="classiccaseCommentnum != null">
+        #{classiccaseCommentnum,jdbcType=INTEGER},
+      </if>
+      <if test="classiccaseIndex != null">
+        #{classiccaseIndex,jdbcType=INTEGER},
+      </if>
+      <if test="classiccaseParlourType != null">
+        #{classiccaseParlourType,jdbcType=VARCHAR},
+      </if>
+      <if test="classiccaseKitchenType != null">
+        #{classiccaseKitchenType,jdbcType=VARCHAR},
+      </if>
+      <if test="classiccaseToiletType != null">
+        #{classiccaseToiletType,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.tiger.pojo.Classiccase">
+    update classiccase_t
+    <set>
+      <if test="classiccaseName != null">
+        classiccase_name = #{classiccaseName,jdbcType=VARCHAR},
+      </if>
+      <if test="classiccaseInfo != null">
+        classiccase_info = #{classiccaseInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="classiccasePicture != null">
+        classiccase_picture = #{classiccasePicture,jdbcType=VARCHAR},
+      </if>
+      <if test="classiccaseCasepicid != null">
+        classiccase_casepicid = #{classiccaseCasepicid,jdbcType=INTEGER},
+      </if>
+      <if test="classiccaseLabel != null">
+        classiccase_label = #{classiccaseLabel,jdbcType=VARCHAR},
+      </if>
+      <if test="classiccaseStyle != null">
+        classiccase_style = #{classiccaseStyle,jdbcType=VARCHAR},
+      </if>
+      <if test="classiccaseAcreage != null">
+        classiccase_acreage = #{classiccaseAcreage,jdbcType=VARCHAR},
+      </if>
+      <if test="classiccaseHouseType != null">
+        classiccase_house_type = #{classiccaseHouseType,jdbcType=VARCHAR},
+      </if>
+      <if test="classiccaseLarge != null">
+        classiccase_large = #{classiccaseLarge,jdbcType=VARCHAR},
+      </if>
+      <if test="classiccaseReadnum != null">
+        classiccase_readnum = #{classiccaseReadnum,jdbcType=INTEGER},
+      </if>
+      <if test="classiccaseCommentnum != null">
+        classiccase_commentnum = #{classiccaseCommentnum,jdbcType=INTEGER},
+      </if>
+      <if test="classiccaseIndex != null">
+        classiccase_index = #{classiccaseIndex,jdbcType=INTEGER},
+      </if>
+      <if test="classiccaseParlourType != null">
+        classiccase_parlour_type = #{classiccaseParlourType,jdbcType=VARCHAR},
+      </if>
+      <if test="classiccaseKitchenType != null">
+        classiccase_kitchen_type = #{classiccaseKitchenType,jdbcType=VARCHAR},
+      </if>
+      <if test="classiccaseToiletType != null">
+        classiccase_toilet_type = #{classiccaseToiletType,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where classiccase_id = #{classiccaseId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.tiger.pojo.Classiccase">
+    update classiccase_t
+    set classiccase_name = #{classiccaseName,jdbcType=VARCHAR},
+      classiccase_info = #{classiccaseInfo,jdbcType=VARCHAR},
+      classiccase_picture = #{classiccasePicture,jdbcType=VARCHAR},
+      classiccase_casepicid = #{classiccaseCasepicid,jdbcType=INTEGER},
+      classiccase_label = #{classiccaseLabel,jdbcType=VARCHAR},
+      classiccase_style = #{classiccaseStyle,jdbcType=VARCHAR},
+      classiccase_acreage = #{classiccaseAcreage,jdbcType=VARCHAR},
+      classiccase_house_type = #{classiccaseHouseType,jdbcType=VARCHAR},
+      classiccase_large = #{classiccaseLarge,jdbcType=VARCHAR},
+      classiccase_readnum = #{classiccaseReadnum,jdbcType=INTEGER},
+      classiccase_commentnum = #{classiccaseCommentnum,jdbcType=INTEGER},
+      classiccase_index = #{classiccaseIndex,jdbcType=INTEGER},
+      classiccase_parlour_type = #{classiccaseParlourType,jdbcType=VARCHAR},
+      classiccase_kitchen_type = #{classiccaseKitchenType,jdbcType=VARCHAR},
+      classiccase_toilet_type = #{classiccaseToiletType,jdbcType=VARCHAR}
+    where classiccase_id = #{classiccaseId,jdbcType=INTEGER}
+  </update>
+   <update id="updateReadnumByClassiccaseId" parameterType="com.tiger.pojo.Classiccase">
+    update classiccase_t
+    set 
+      classiccase_readnum += 1
+    where classiccase_id = #{classiccaseId,jdbcType=INTEGER}
+  </update>
+</mapper>

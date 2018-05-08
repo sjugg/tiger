@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tiger.dao.BuildingbespeakDao">
+  <resultMap id="BaseResultMap" type="com.tiger.pojo.Buildingbespeak">
+    <id column="buildingbespeak_id" jdbcType="INTEGER" property="buildingbespeakId" />
+    <result column="buildingbespeak_username" jdbcType="VARCHAR" property="buildingbespeakUsername" />
+    <result column="buildingbespeak_tel" jdbcType="VARCHAR" property="buildingbespeakTel" />
+    <result column="buildingbespeak_time" jdbcType="TIMESTAMP" property="buildingbespeakTime" />
+    <result column="buildingbespeak_state" jdbcType="VARCHAR" property="buildingbespeakState" />
+    <result column="buildingbespeak_buildingid" jdbcType="INTEGER" property="buildingbespeakBuildingid" />
+  	<collection property="building" ofType="com.tiger.pojo.Building">  
+             <id column="building_id" jdbcType="INTEGER" property="buildingId" />
+		    <result column="building_name" jdbcType="VARCHAR" property="buildingName" />
+		    <result column="building_pic" jdbcType="VARCHAR" property="buildingPic" />
+		    <result column="building_totaluser" jdbcType="INTEGER" property="buildingTotaluser" />
+		    <result column="building_usered" jdbcType="INTEGER" property="buildingUsered" />
+    </collection>
+  </resultMap>
+  <sql id="Base_Column_List">
+    buildingbespeak_id, buildingbespeak_username, buildingbespeak_tel, buildingbespeak_time, 
+    buildingbespeak_state, buildingbespeak_buildingid
+  </sql>
+   
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from buildingbespeak_t
+    where buildingbespeak_id = #{buildingbespeakId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAllBuildingbespeak" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from buildingbespeak_t
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from buildingbespeak_t
+    where buildingbespeak_id = #{buildingbespeakId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.tiger.pojo.Buildingbespeak">
+    insert into buildingbespeak_t (buildingbespeak_id, buildingbespeak_username, 
+      buildingbespeak_tel, buildingbespeak_time, 
+      buildingbespeak_buildingid
+      )
+    values (#{buildingbespeakId,jdbcType=INTEGER}, #{buildingbespeakUsername,jdbcType=VARCHAR}, 
+      #{buildingbespeakTel,jdbcType=VARCHAR}, now(),#{buildingbespeakBuildingid,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.tiger.pojo.Buildingbespeak">
+    insert into buildingbespeak_t
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="buildingbespeakId != null">
+        buildingbespeak_id,
+      </if>
+      <if test="buildingbespeakUsername != null">
+        buildingbespeak_username,
+      </if>
+      <if test="buildingbespeakTel != null">
+        buildingbespeak_tel,
+      </if>
+      <if test="buildingbespeakTime != null">
+        buildingbespeak_time,
+      </if>
+      <if test="buildingbespeakState != null">
+        buildingbespeak_state,
+      </if>
+      <if test="buildingbespeakBuildingid != null">
+        buildingbespeak_buildingid,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="buildingbespeakId != null">
+        #{buildingbespeakId,jdbcType=INTEGER},
+      </if>
+      <if test="buildingbespeakUsername != null">
+        #{buildingbespeakUsername,jdbcType=VARCHAR},
+      </if>
+      <if test="buildingbespeakTel != null">
+        #{buildingbespeakTel,jdbcType=VARCHAR},
+      </if>
+      <if test="buildingbespeakTime != null">
+        #{buildingbespeakTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="buildingbespeakState != null">
+        #{buildingbespeakState,jdbcType=VARCHAR},
+      </if>
+      <if test="buildingbespeakBuildingid != null">
+        #{buildingbespeakBuildingid,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.tiger.pojo.Buildingbespeak">
+    update buildingbespeak_t
+    <set>
+      <if test="buildingbespeakUsername != null">
+        buildingbespeak_username = #{buildingbespeakUsername,jdbcType=VARCHAR},
+      </if>
+      <if test="buildingbespeakTel != null">
+        buildingbespeak_tel = #{buildingbespeakTel,jdbcType=VARCHAR},
+      </if>
+      <if test="buildingbespeakTime != null">
+        buildingbespeak_time = #{buildingbespeakTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="buildingbespeakState != null">
+        buildingbespeak_state = #{buildingbespeakState,jdbcType=VARCHAR},
+      </if>
+      <if test="buildingbespeakBuildingid != null">
+        buildingbespeak_buildingid = #{buildingbespeakBuildingid,jdbcType=INTEGER},
+      </if>
+    </set>
+    where buildingbespeak_id = #{buildingbespeakId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.tiger.pojo.Buildingbespeak">
+    update buildingbespeak_t
+    set buildingbespeak_username = #{buildingbespeakUsername,jdbcType=VARCHAR},
+      buildingbespeak_tel = #{buildingbespeakTel,jdbcType=VARCHAR},
+      buildingbespeak_time = #{buildingbespeakTime,jdbcType=TIMESTAMP},
+      buildingbespeak_state = #{buildingbespeakState,jdbcType=VARCHAR},
+      buildingbespeak_buildingid = #{buildingbespeakBuildingid,jdbcType=INTEGER}
+    where buildingbespeak_id = #{buildingbespeakId,jdbcType=INTEGER}
+  </update>
+  <update id="updateBuildingbespeakStateById" parameterType="java.lang.Integer" >
+    	update buildingbespeak_t,building_t
+    	set buildingbespeak_t.buildingbespeak_state = 1,
+    	building_t.building_usered = building_t.building_usered + 1
+    	where buildingbespeak_id = #{buildingbespeakId,jdbcType=INTEGER}
+    	and
+    	building_id = buildingbespeak_id
+  </update>
+</mapper>
