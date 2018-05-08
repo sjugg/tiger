@@ -24,7 +24,13 @@
 			<artifactId>spymemcached</artifactId>
 			<version>2.12.3</version>
 		</dependency>
-
+		<!-- https://mvnrepository.com/artifact/com.whalin/Memcached-Java-Client -->
+		<dependency>
+		    <groupId>com.whalin</groupId>
+		    <artifactId>Memcached-Java-Client</artifactId>
+		    <version>3.0.2</version>
+		</dependency>
+		
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
