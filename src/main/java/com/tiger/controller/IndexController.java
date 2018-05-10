@@ -26,6 +26,7 @@ import com.tiger.pojo.Classiccase;
 import com.tiger.pojo.Design;
 import com.tiger.pojo.Designbespeak;
 import com.tiger.pojo.Designoffer;
+import com.tiger.pojo.NoteInfo;
 import com.tiger.pojo.Quoedprice;
 import com.tiger.pojo.Strategy;
 import com.tiger.pojo.UserInfo;
@@ -86,6 +87,11 @@ public class IndexController {
 				request.getSession().putValue("province", province);
 			}
 			System.out.println("当前城市："+city);
+			SpyMemcachedManager spyMemcachedManager=SpyMemcachedManager.getInstance();
+			NoteInfo noteInfo=(NoteInfo) spyMemcachedManager.get("noteInfo");
+			if(noteInfo!=null){
+				request.getSession().putValue("haveNote", true);
+			}
 		} catch (UnsupportedEncodingException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

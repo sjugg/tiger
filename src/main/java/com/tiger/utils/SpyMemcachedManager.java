@@ -3,6 +3,7 @@ package com.tiger.utils;
 import net.spy.memcached.CASResponse;
 import net.spy.memcached.CASValue;
 import net.spy.memcached.MemcachedClient;
+import net.spy.memcached.internal.OperationFuture;
 
 public class SpyMemcachedManager {
 	private static MemcachedClient memcachedClient;
@@ -53,7 +54,10 @@ public class SpyMemcachedManager {
 	public static boolean deleteCache(String key) {
 		return memcachedClient.delete(key) != null;
 	}
-
+	
+	public static OperationFuture<Boolean> replaceCache(String key,int exp,Object value){
+		return memcachedClient.replace(key, exp, value);
+	}
 	/**
 	 * gets方法.
 	 * 

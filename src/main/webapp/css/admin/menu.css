@@ -6,7 +6,7 @@ body {
 	padding: 0px;
 	margin: auto;
 	text-align: center;
-	background-color:#40658c;
+	background-color:#eff4f5;
 }
 table.left {
 	width:99%;
@@ -14,7 +14,7 @@ table.left {
 	border:0;
 }
 table.left td {
-	padding-left:3px;
+	padding-left:6px;
 	padding-top:8px;
 	line-height: 1.5; 
 }
@@ -24,10 +24,11 @@ dl.bitem {
 }
 dl.bitem dt {
 	background: url(../images/menubg_up.png) no-repeat;
-	height: 26px;
-	line-height: 26px;
+	height: 49px;
+	line-height: 53px;
 	text-align: center;
 	cursor: pointer;
+	border: #b8d0d6 1px solid;
 }
 dl.bitem dt b {
 	color:#0d4b8d;
@@ -49,10 +50,12 @@ li {
 }
 .sitemu li:hover {
 	background: url(../images/triangle.png) no-repeat 10px 7px;
+	background-color:#eaeaea;
 }
 .sitemu li.selected{
 	font-weight:bold;
 	background: url(../images/triangle.png) no-repeat 10px 7px;
+	background-color:#eaeaea;
 }
 .sitemu li a {
 	color:#000000;

@@ -1,0 +1,760 @@
+2018.05.08 17:00:53  INFO ContextLoader(307):? Root WebApplicationContext: initialization started
+   2018.05.08 17:00:54  INFO XmlWebApplicationContext(573):? Refreshing Root WebApplicationContext: startup date [Tue May 08 17:00:54 CST 2018]; root of context hierarchy
+   2018.05.08 17:00:54  INFO XmlBeanDefinitionReader(317):? Loading XML bean definitions from class path resource [spring-mybatis.xml]
+   2018.05.08 17:00:54  INFO PropertyPlaceholderConfigurer(172):? Loading properties file from class path resource [jdbc.properties]
+   2018.05.08 17:00:55  INFO AutowiredAnnotationBeanPostProcessor(153):? JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+   2018.05.08 17:00:56  INFO ContextLoader(347):? Root WebApplicationContext: initialization completed in 2346 ms
+   2018.05.08 17:00:56  INFO DispatcherServlet(488):? FrameworkServlet 'SpringMVC': initialization started
+   2018.05.08 17:00:56  INFO XmlWebApplicationContext(573):? Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue May 08 17:00:56 CST 2018]; parent: Root WebApplicationContext
+   2018.05.08 17:00:56  INFO XmlBeanDefinitionReader(317):? Loading XML bean definitions from class path resource [spring-mvc.xml]
+   2018.05.08 17:00:56  INFO XmlBeanDefinitionReader(317):? Loading XML bean definitions from class path resource [spring-spyMemcached.xml]
+   2018.05.08 17:00:56  INFO PropertyPlaceholderConfigurer(172):? Loading properties file from class path resource [spyMemcached.properties]
+   2018.05.08 17:00:56  INFO AutowiredAnnotationBeanPostProcessor(153):? JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+   2018.05.08 17:00:57  INFO PropertiesFactoryBean(172):? Loading properties file from class path resource [spyMemcached.properties]
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/acmedecoration/showAllAcmedecoration] onto handler 'adminAcmedecorationController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/acmedecoration/showAllAcmedecoration.*] onto handler 'adminAcmedecorationController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/acmedecoration/showAllAcmedecoration/] onto handler 'adminAcmedecorationController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/acmedecoration/acmedecorationDetail] onto handler 'adminAcmedecorationController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/acmedecoration/acmedecorationDetail.*] onto handler 'adminAcmedecorationController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/acmedecoration/acmedecorationDetail/] onto handler 'adminAcmedecorationController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/acmedecoration/toAddAcmedecoration] onto handler 'adminAcmedecorationController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/acmedecoration/toAddAcmedecoration.*] onto handler 'adminAcmedecorationController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/acmedecoration/toAddAcmedecoration/] onto handler 'adminAcmedecorationController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/acmedecoration/addAcmedecoration] onto handler 'adminAcmedecorationController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/acmedecoration/addAcmedecoration.*] onto handler 'adminAcmedecorationController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/acmedecoration/addAcmedecoration/] onto handler 'adminAcmedecorationController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/building/delBuilding] onto handler 'adminBuildingController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/building/delBuilding.*] onto handler 'adminBuildingController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/building/delBuilding/] onto handler 'adminBuildingController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/building/buildingDealWith] onto handler 'adminBuildingController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/building/buildingDealWith.*] onto handler 'adminBuildingController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/building/buildingDealWith/] onto handler 'adminBuildingController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/building/toAddBuilding] onto handler 'adminBuildingController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/building/toAddBuilding.*] onto handler 'adminBuildingController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/building/toAddBuilding/] onto handler 'adminBuildingController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/building/addBuilding] onto handler 'adminBuildingController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/building/addBuilding.*] onto handler 'adminBuildingController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/building/addBuilding/] onto handler 'adminBuildingController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/building/showAllBuilding] onto handler 'adminBuildingController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/building/showAllBuilding.*] onto handler 'adminBuildingController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/building/showAllBuilding/] onto handler 'adminBuildingController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/building/showAllBuildingbespeak] onto handler 'adminBuildingController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/building/showAllBuildingbespeak.*] onto handler 'adminBuildingController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/building/showAllBuildingbespeak/] onto handler 'adminBuildingController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/classicCase/toAddClassicCase] onto handler 'adminClassicCaseController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/classicCase/toAddClassicCase.*] onto handler 'adminClassicCaseController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/classicCase/toAddClassicCase/] onto handler 'adminClassicCaseController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/classicCase/addClassicCase] onto handler 'adminClassicCaseController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/classicCase/addClassicCase.*] onto handler 'adminClassicCaseController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/classicCase/addClassicCase/] onto handler 'adminClassicCaseController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/classicCase/delClassicCase] onto handler 'adminClassicCaseController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/classicCase/delClassicCase.*] onto handler 'adminClassicCaseController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/classicCase/delClassicCase/] onto handler 'adminClassicCaseController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/classicCase/showAllClassicCase] onto handler 'adminClassicCaseController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/classicCase/showAllClassicCase.*] onto handler 'adminClassicCaseController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/classicCase/showAllClassicCase/] onto handler 'adminClassicCaseController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/classicCase/showClassicCaseById] onto handler 'adminClassicCaseController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/classicCase/showClassicCaseById.*] onto handler 'adminClassicCaseController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/classicCase/showClassicCaseById/] onto handler 'adminClassicCaseController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/admin/showAdmin] onto handler 'adminController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/admin/showAdmin.*] onto handler 'adminController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/admin/showAdmin/] onto handler 'adminController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/admin/addAdmin] onto handler 'adminController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/admin/addAdmin.*] onto handler 'adminController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/admin/addAdmin/] onto handler 'adminController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/admin/delAdmin] onto handler 'adminController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/admin/delAdmin.*] onto handler 'adminController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/admin/delAdmin/] onto handler 'adminController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/admin/toAdminLogin] onto handler 'adminController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/admin/toAdminLogin.*] onto handler 'adminController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/admin/toAdminLogin/] onto handler 'adminController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/admin/loginAdmin] onto handler 'adminController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/admin/loginAdmin.*] onto handler 'adminController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/admin/loginAdmin/] onto handler 'adminController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/admin/showAllAdmin] onto handler 'adminController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/admin/showAllAdmin.*] onto handler 'adminController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/admin/showAllAdmin/] onto handler 'adminController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/admin/toAddAdmin] onto handler 'adminController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/admin/toAddAdmin.*] onto handler 'adminController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/admin/toAddAdmin/] onto handler 'adminController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/admin/toUpdateAdmin] onto handler 'adminController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/admin/toUpdateAdmin.*] onto handler 'adminController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/admin/toUpdateAdmin/] onto handler 'adminController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/admin/updateAdmin] onto handler 'adminController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/admin/updateAdmin.*] onto handler 'adminController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/admin/updateAdmin/] onto handler 'adminController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/admin/updatePassword] onto handler 'adminController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/admin/updatePassword.*] onto handler 'adminController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/admin/updatePassword/] onto handler 'adminController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/design/showAllDesign] onto handler 'adminDesignController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/design/showAllDesign.*] onto handler 'adminDesignController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/design/showAllDesign/] onto handler 'adminDesignController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/design/toAddDesign] onto handler 'adminDesignController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/design/toAddDesign.*] onto handler 'adminDesignController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/design/toAddDesign/] onto handler 'adminDesignController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/design/addDesign] onto handler 'adminDesignController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/design/addDesign.*] onto handler 'adminDesignController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/design/addDesign/] onto handler 'adminDesignController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/design/showAllDesignoffer] onto handler 'adminDesignController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/design/showAllDesignoffer.*] onto handler 'adminDesignController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/design/showAllDesignoffer/] onto handler 'adminDesignController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/design/showAllDesignbespeak] onto handler 'adminDesignController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/design/showAllDesignbespeak.*] onto handler 'adminDesignController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/design/showAllDesignbespeak/] onto handler 'adminDesignController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/index] onto handler 'adminIndexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/index.*] onto handler 'adminIndexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/index/] onto handler 'adminIndexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/top] onto handler 'adminIndexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/top.*] onto handler 'adminIndexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/top/] onto handler 'adminIndexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/menu] onto handler 'adminIndexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/menu.*] onto handler 'adminIndexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/menu/] onto handler 'adminIndexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/sysPro] onto handler 'adminIndexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/sysPro.*] onto handler 'adminIndexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/sysPro/] onto handler 'adminIndexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/strategy/updateStrategy] onto handler 'adminStrategyController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/strategy/updateStrategy.*] onto handler 'adminStrategyController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/strategy/updateStrategy/] onto handler 'adminStrategyController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/strategy/toAddStrategy] onto handler 'adminStrategyController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/strategy/toAddStrategy.*] onto handler 'adminStrategyController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/strategy/toAddStrategy/] onto handler 'adminStrategyController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/strategy/showStrategyByKindsId] onto handler 'adminStrategyController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/strategy/showStrategyByKindsId.*] onto handler 'adminStrategyController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/strategy/showStrategyByKindsId/] onto handler 'adminStrategyController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/strategy/showStrategyById] onto handler 'adminStrategyController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/strategy/showStrategyById.*] onto handler 'adminStrategyController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/strategy/showStrategyById/] onto handler 'adminStrategyController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/strategy/showAllStrategy] onto handler 'adminStrategyController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/strategy/showAllStrategy.*] onto handler 'adminStrategyController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/strategy/showAllStrategy/] onto handler 'adminStrategyController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/strategy/delStrategy] onto handler 'adminStrategyController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/strategy/delStrategy.*] onto handler 'adminStrategyController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/strategy/delStrategy/] onto handler 'adminStrategyController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/strategy/toUpdateStrategy] onto handler 'adminStrategyController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/strategy/toUpdateStrategy.*] onto handler 'adminStrategyController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/strategy/toUpdateStrategy/] onto handler 'adminStrategyController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/strategy/strategyDetail] onto handler 'adminStrategyController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/strategy/strategyDetail.*] onto handler 'adminStrategyController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/strategy/strategyDetail/] onto handler 'adminStrategyController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/strategy/addStrategy] onto handler 'adminStrategyController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/strategy/addStrategy.*] onto handler 'adminStrategyController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/admin/strategy/addStrategy/] onto handler 'adminStrategyController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/classiccase/classicCaseDetail] onto handler 'classicCaseController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/classiccase/classicCaseDetail.*] onto handler 'classicCaseController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/classiccase/classicCaseDetail/] onto handler 'classicCaseController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/classiccase/classicCase] onto handler 'classicCaseController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/classiccase/classicCase.*] onto handler 'classicCaseController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/classiccase/classicCase/] onto handler 'classicCaseController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/decoration/decorationSupport] onto handler 'decorationController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/decoration/decorationSupport.*] onto handler 'decorationController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/decoration/decorationSupport/] onto handler 'decorationController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/decoration/allAcmedecorationJson] onto handler 'decorationController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/decoration/allAcmedecorationJson.*] onto handler 'decorationController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/decoration/allAcmedecorationJson/] onto handler 'decorationController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/decoration/decorationService] onto handler 'decorationController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/decoration/decorationService.*] onto handler 'decorationController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/decoration/decorationService/] onto handler 'decorationController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/decoration/strategyDetail] onto handler 'decorationController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/decoration/strategyDetail.*] onto handler 'decorationController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/decoration/strategyDetail/] onto handler 'decorationController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/decoration/strategy] onto handler 'decorationController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/decoration/strategy.*] onto handler 'decorationController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/decoration/strategy/] onto handler 'decorationController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/decoration/acmedecorationDetail] onto handler 'decorationController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/decoration/acmedecorationDetail.*] onto handler 'decorationController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/decoration/acmedecorationDetail/] onto handler 'decorationController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/homeDressScene/homeDressSceneDetail] onto handler 'homeDressSceneController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/homeDressScene/homeDressSceneDetail.*] onto handler 'homeDressSceneController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/homeDressScene/homeDressSceneDetail/] onto handler 'homeDressSceneController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/homeDressScene/homeDressScene] onto handler 'homeDressSceneController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/homeDressScene/homeDressScene.*] onto handler 'homeDressSceneController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/homeDressScene/homeDressScene/] onto handler 'homeDressSceneController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/homeDressScene/order] onto handler 'homeDressSceneController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/homeDressScene/order.*] onto handler 'homeDressSceneController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/homeDressScene/order/] onto handler 'homeDressSceneController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/index] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/index.*] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/index/] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/joinReg] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/joinReg.*] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/joinReg/] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/toIndex] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/toIndex.*] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/toIndex/] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/footer] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/footer.*] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/footer/] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/register] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/register.*] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/register/] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/design] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/design.*] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/design/] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/designbespeak] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/designbespeak.*] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/designbespeak/] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/designoffer] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/designoffer.*] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/designoffer/] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/designShow] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/designShow.*] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/designShow/] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/renovation] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/renovation.*] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/renovation/] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/quotationShow] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/quotationShow.*] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/quotationShow/] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/toQuotationShow] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/toQuotationShow.*] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/toQuotationShow/] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/userFeedBack] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/userFeedBack.*] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/userFeedBack/] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/joinUs] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/joinUs.*] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/joinUs/] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/contactUs] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/contactUs.*] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/contactUs/] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/recruit] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/recruit.*] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/recruit/] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/about] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/about.*] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/about/] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/account] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/account.*] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/account/] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/identity] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/identity.*] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/identity/] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/newpass] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/newpass.*] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/newpass/] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/finish] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/finish.*] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/finish/] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/material] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/material.*] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/material/] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/materialRight] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/materialRight.*] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/materialRight/] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/materialDetail] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/materialDetail.*] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/materialDetail/] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/tologin] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/tologin.*] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/tologin/] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/buildingBespeakShow] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/buildingBespeakShow.*] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/buildingBespeakShow/] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/BuildingBespeak] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/BuildingBespeak.*] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/BuildingBespeak/] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/acmedecorationJson] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/acmedecorationJson.*] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/acmedecorationJson/] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/materialRightSec] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/materialRightSec.*] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/materialRightSec/] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/materialDetailSec] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/materialDetailSec.*] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/materialDetailSec/] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/login] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/login.*] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/login/] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/checkCode] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/checkCode.*] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/checkCode/] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/header] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/header.*] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/header/] onto handler 'indexController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/smartHome/smartHome] onto handler 'smartHomeController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/smartHome/smartHome.*] onto handler 'smartHomeController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/smartHome/smartHome/] onto handler 'smartHomeController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/supplier/supplierInfo] onto handler 'supplierController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/supplier/supplierInfo.*] onto handler 'supplierController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/supplier/supplierInfo/] onto handler 'supplierController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/supplier/supplierUpMaterial] onto handler 'supplierController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/supplier/supplierUpMaterial.*] onto handler 'supplierController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/supplier/supplierUpMaterial/] onto handler 'supplierController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/supplier/supplierHomepage] onto handler 'supplierController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/supplier/supplierHomepage.*] onto handler 'supplierController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/supplier/supplierHomepage/] onto handler 'supplierController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/upload/upload] onto handler 'uploadController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/upload/upload.*] onto handler 'uploadController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/upload/upload/] onto handler 'uploadController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/upload/toUpload2] onto handler 'uploadController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/upload/toUpload2.*] onto handler 'uploadController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/upload/toUpload2/] onto handler 'uploadController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/upload/toUpload] onto handler 'uploadController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/upload/toUpload.*] onto handler 'uploadController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/upload/toUpload/] onto handler 'uploadController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/user/register] onto handler 'userController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/user/register.*] onto handler 'userController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/user/register/] onto handler 'userController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/user/login] onto handler 'userController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/user/login.*] onto handler 'userController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/user/login/] onto handler 'userController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/user/logout] onto handler 'userController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/user/logout.*] onto handler 'userController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/user/logout/] onto handler 'userController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/user/userHomePage] onto handler 'userController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/user/userHomePage.*] onto handler 'userController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/user/userHomePage/] onto handler 'userController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/user/userInfo] onto handler 'userController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/user/userInfo.*] onto handler 'userController'
+   2018.05.08 17:00:58  INFO DefaultAnnotationHandlerMapping(341):? Mapped URL path [/user/userInfo/] onto handler 'userController'
+   2018.05.08 17:00:58  INFO DispatcherServlet(507):? FrameworkServlet 'SpringMVC': initialization completed in 2127 ms
+   2018.05.08 18:03:55  INFO ContextLoader(307):? Root WebApplicationContext: initialization started
+   2018.05.08 18:03:55  INFO XmlWebApplicationContext(573):? Refreshing Root WebApplicationContext: startup date [Tue May 08 18:03:55 CST 2018]; root of context hierarchy
+   2018.05.08 18:03:55  INFO XmlBeanDefinitionReader(317):? Loading XML bean definitions from class path resource [spring-mybatis.xml]
+   2018.05.08 18:03:55  INFO PropertyPlaceholderConfigurer(172):? Loading properties file from class path resource [jdbc.properties]
+   2018.05.08 18:03:55  INFO AutowiredAnnotationBeanPostProcessor(153):? JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+   2018.05.08 18:03:56  INFO ContextLoader(347):? Root WebApplicationContext: initialization completed in 1851 ms
+   2018.05.08 18:03:56  INFO DispatcherServlet(488):? FrameworkServlet 'SpringMVC': initialization started
+   2018.05.08 18:03:56  INFO XmlWebApplicationContext(573):? Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue May 08 18:03:56 CST 2018]; parent: Root WebApplicationContext
+   2018.05.08 18:03:56  INFO XmlBeanDefinitionReader(317):? Loading XML bean definitions from class path resource [spring-mvc.xml]
+   2018.05.08 18:03:57  INFO XmlBeanDefinitionReader(317):? Loading XML bean definitions from class path resource [spring-spyMemcached.xml]
+   2018.05.08 18:03:57  INFO XmlBeanDefinitionReader(317):? Loading XML bean definitions from class path resource [spring-jms.xml]
+   2018.05.08 18:03:57 ERROR DispatcherServlet(501):? Context initialization failed
+   org.springframework.beans.factory.parsing.BeanDefinitionParsingException: Configuration problem: Failed to import bean definitions from relative location [spring-jms.xml]
+Offending resource: class path resource [spring-mvc.xml]; nested exception is org.springframework.beans.factory.parsing.BeanDefinitionParsingException: Configuration problem: Unexpected failure during bean definition parsing
+Offending resource: class path resource [spring-jms.xml]
+Bean 'pooledConnectionFactory'; nested exception is org.springframework.beans.factory.parsing.BeanDefinitionParsingException: Configuration problem: <property> element for property 'connectionFactory' must specify a ref or value
+Offending resource: class path resource [spring-jms.xml]
+Bean 'pooledConnectionFactory'
+	-> Property 'connectionFactory'
+	at org.springframework.beans.factory.parsing.FailFastProblemReporter.error(FailFastProblemReporter.java:70)
+	at org.springframework.beans.factory.parsing.ReaderContext.error(ReaderContext.java:85)
+	at org.springframework.beans.factory.parsing.ReaderContext.error(ReaderContext.java:76)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.importBeanDefinitionResource(DefaultBeanDefinitionDocumentReader.java:255)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.parseDefaultElement(DefaultBeanDefinitionDocumentReader.java:180)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.parseBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:165)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.doRegisterBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:138)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.registerBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:94)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.registerBeanDefinitions(XmlBeanDefinitionReader.java:508)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:392)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:336)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:181)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:217)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:188)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94)
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129)
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:604)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:509)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:667)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:633)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:552)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:493)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:160)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1280)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1193)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1088)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:5176)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5460)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.springframework.beans.factory.parsing.BeanDefinitionParsingException: Configuration problem: Unexpected failure during bean definition parsing
+Offending resource: class path resource [spring-jms.xml]
+Bean 'pooledConnectionFactory'; nested exception is org.springframework.beans.factory.parsing.BeanDefinitionParsingException: Configuration problem: <property> element for property 'connectionFactory' must specify a ref or value
+Offending resource: class path resource [spring-jms.xml]
+Bean 'pooledConnectionFactory'
+	-> Property 'connectionFactory'
+	at org.springframework.beans.factory.parsing.FailFastProblemReporter.error(FailFastProblemReporter.java:70)
+	at org.springframework.beans.factory.parsing.ReaderContext.error(ReaderContext.java:85)
+	at org.springframework.beans.factory.xml.BeanDefinitionParserDelegate.error(BeanDefinitionParserDelegate.java:308)
+	at org.springframework.beans.factory.xml.BeanDefinitionParserDelegate.parseBeanDefinitionElement(BeanDefinitionParserDelegate.java:562)
+	at org.springframework.beans.factory.xml.BeanDefinitionParserDelegate.parseBeanDefinitionElement(BeanDefinitionParserDelegate.java:460)
+	at org.springframework.beans.factory.xml.BeanDefinitionParserDelegate.parseBeanDefinitionElement(BeanDefinitionParserDelegate.java:429)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.processBeanDefinition(DefaultBeanDefinitionDocumentReader.java:295)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.parseDefaultElement(DefaultBeanDefinitionDocumentReader.java:186)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.parseBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:165)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.doRegisterBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:138)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.registerBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:94)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.registerBeanDefinitions(XmlBeanDefinitionReader.java:508)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:392)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:336)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.importBeanDefinitionResource(DefaultBeanDefinitionDocumentReader.java:239)
+	... 35 more
+Caused by: org.springframework.beans.factory.parsing.BeanDefinitionParsingException: Configuration problem: <property> element for property 'connectionFactory' must specify a ref or value
+Offending resource: class path resource [spring-jms.xml]
+Bean 'pooledConnectionFactory'
+	-> Property 'connectionFactory'
+	at org.springframework.beans.factory.parsing.FailFastProblemReporter.error(FailFastProblemReporter.java:70)
+	at org.springframework.beans.factory.parsing.ReaderContext.error(ReaderContext.java:85)
+	at org.springframework.beans.factory.parsing.ReaderContext.error(ReaderContext.java:80)
+	at org.springframework.beans.factory.xml.BeanDefinitionParserDelegate.error(BeanDefinitionParserDelegate.java:301)
+	at org.springframework.beans.factory.xml.BeanDefinitionParserDelegate.parsePropertyValue(BeanDefinitionParserDelegate.java:1000)
+	at org.springframework.beans.factory.xml.BeanDefinitionParserDelegate.parsePropertyElement(BeanDefinitionParserDelegate.java:894)
+	at org.springframework.beans.factory.xml.BeanDefinitionParserDelegate.parsePropertyElements(BeanDefinitionParserDelegate.java:755)
+	at org.springframework.beans.factory.xml.BeanDefinitionParserDelegate.parseBeanDefinitionElement(BeanDefinitionParserDelegate.java:547)
+	... 47 more
+2018.05.08 18:05:15  INFO ContextLoader(307):? Root WebApplicationContext: initialization started
+   2018.05.08 18:05:16  INFO XmlWebApplicationContext(573):? Refreshing Root WebApplicationContext: startup date [Tue May 08 18:05:16 CST 2018]; root of context hierarchy
+   2018.05.08 18:05:16  INFO XmlBeanDefinitionReader(317):? Loading XML bean definitions from class path resource [spring-mybatis.xml]
+   2018.05.08 18:05:16  INFO PropertyPlaceholderConfigurer(172):? Loading properties file from class path resource [jdbc.properties]
+   2018.05.08 18:05:16  INFO AutowiredAnnotationBeanPostProcessor(153):? JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+   2018.05.08 18:05:17  INFO ContextLoader(347):? Root WebApplicationContext: initialization completed in 1537 ms
+   2018.05.08 18:05:17  INFO DispatcherServlet(488):? FrameworkServlet 'SpringMVC': initialization started
+   2018.05.08 18:05:17  INFO XmlWebApplicationContext(573):? Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue May 08 18:05:17 CST 2018]; parent: Root WebApplicationContext
+   2018.05.08 18:05:17  INFO XmlBeanDefinitionReader(317):? Loading XML bean definitions from class path resource [spring-mvc.xml]
+   2018.05.08 18:05:17  INFO XmlBeanDefinitionReader(317):? Loading XML bean definitions from class path resource [spring-spyMemcached.xml]
+   2018.05.08 18:05:17  INFO XmlBeanDefinitionReader(317):? Loading XML bean definitions from class path resource [spring-jms.xml]
+   2018.05.08 18:05:17 ERROR DispatcherServlet(501):? Context initialization failed
+   org.springframework.beans.factory.parsing.BeanDefinitionParsingException: Configuration problem: Failed to import bean definitions from relative location [spring-jms.xml]
+Offending resource: class path resource [spring-mvc.xml]; nested exception is org.springframework.beans.factory.parsing.BeanDefinitionParsingException: Configuration problem: Unexpected failure during bean definition parsing
+Offending resource: class path resource [spring-jms.xml]
+Bean 'pooledConnectionFactory'; nested exception is org.springframework.beans.factory.parsing.BeanDefinitionParsingException: Configuration problem: <property> element for property 'connectionFactory' must specify a ref or value
+Offending resource: class path resource [spring-jms.xml]
+Bean 'pooledConnectionFactory'
+	-> Property 'connectionFactory'
+	at org.springframework.beans.factory.parsing.FailFastProblemReporter.error(FailFastProblemReporter.java:70)
+	at org.springframework.beans.factory.parsing.ReaderContext.error(ReaderContext.java:85)
+	at org.springframework.beans.factory.parsing.ReaderContext.error(ReaderContext.java:76)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.importBeanDefinitionResource(DefaultBeanDefinitionDocumentReader.java:255)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.parseDefaultElement(DefaultBeanDefinitionDocumentReader.java:180)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.parseBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:165)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.doRegisterBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:138)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.registerBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:94)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.registerBeanDefinitions(XmlBeanDefinitionReader.java:508)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:392)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:336)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:181)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:217)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:188)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94)
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129)
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:604)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:509)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:667)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:633)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:552)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:493)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:160)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1280)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1193)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1088)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:5176)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5460)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.springframework.beans.factory.parsing.BeanDefinitionParsingException: Configuration problem: Unexpected failure during bean definition parsing
+Offending resource: class path resource [spring-jms.xml]
+Bean 'pooledConnectionFactory'; nested exception is org.springframework.beans.factory.parsing.BeanDefinitionParsingException: Configuration problem: <property> element for property 'connectionFactory' must specify a ref or value
+Offending resource: class path resource [spring-jms.xml]
+Bean 'pooledConnectionFactory'
+	-> Property 'connectionFactory'
+	at org.springframework.beans.factory.parsing.FailFastProblemReporter.error(FailFastProblemReporter.java:70)
+	at org.springframework.beans.factory.parsing.ReaderContext.error(ReaderContext.java:85)
+	at org.springframework.beans.factory.xml.BeanDefinitionParserDelegate.error(BeanDefinitionParserDelegate.java:308)
+	at org.springframework.beans.factory.xml.BeanDefinitionParserDelegate.parseBeanDefinitionElement(BeanDefinitionParserDelegate.java:562)
+	at org.springframework.beans.factory.xml.BeanDefinitionParserDelegate.parseBeanDefinitionElement(BeanDefinitionParserDelegate.java:460)
+	at org.springframework.beans.factory.xml.BeanDefinitionParserDelegate.parseBeanDefinitionElement(BeanDefinitionParserDelegate.java:429)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.processBeanDefinition(DefaultBeanDefinitionDocumentReader.java:295)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.parseDefaultElement(DefaultBeanDefinitionDocumentReader.java:186)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.parseBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:165)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.doRegisterBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:138)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.registerBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:94)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.registerBeanDefinitions(XmlBeanDefinitionReader.java:508)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:392)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:336)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.importBeanDefinitionResource(DefaultBeanDefinitionDocumentReader.java:239)
+	... 35 more
+Caused by: org.springframework.beans.factory.parsing.BeanDefinitionParsingException: Configuration problem: <property> element for property 'connectionFactory' must specify a ref or value
+Offending resource: class path resource [spring-jms.xml]
+Bean 'pooledConnectionFactory'
+	-> Property 'connectionFactory'
+	at org.springframework.beans.factory.parsing.FailFastProblemReporter.error(FailFastProblemReporter.java:70)
+	at org.springframework.beans.factory.parsing.ReaderContext.error(ReaderContext.java:85)
+	at org.springframework.beans.factory.parsing.ReaderContext.error(ReaderContext.java:80)
+	at org.springframework.beans.factory.xml.BeanDefinitionParserDelegate.error(BeanDefinitionParserDelegate.java:301)
+	at org.springframework.beans.factory.xml.BeanDefinitionParserDelegate.parsePropertyValue(BeanDefinitionParserDelegate.java:1000)
+	at org.springframework.beans.factory.xml.BeanDefinitionParserDelegate.parsePropertyElement(BeanDefinitionParserDelegate.java:894)
+	at org.springframework.beans.factory.xml.BeanDefinitionParserDelegate.parsePropertyElements(BeanDefinitionParserDelegate.java:755)
+	at org.springframework.beans.factory.xml.BeanDefinitionParserDelegate.parseBeanDefinitionElement(BeanDefinitionParserDelegate.java:547)
+	... 47 more
+2018.05.08 18:10:15  INFO ContextLoader(307):? Root WebApplicationContext: initialization started
+   2018.05.08 18:10:15  INFO XmlWebApplicationContext(573):? Refreshing Root WebApplicationContext: startup date [Tue May 08 18:10:15 CST 2018]; root of context hierarchy
+   2018.05.08 18:10:15  INFO XmlBeanDefinitionReader(317):? Loading XML bean definitions from class path resource [spring-mybatis.xml]
+   2018.05.08 18:10:15  INFO PropertyPlaceholderConfigurer(172):? Loading properties file from class path resource [jdbc.properties]
+   2018.05.08 18:10:15  INFO AutowiredAnnotationBeanPostProcessor(153):? JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+   2018.05.08 18:10:16  INFO ContextLoader(347):? Root WebApplicationContext: initialization completed in 1733 ms
+   2018.05.08 18:10:16  INFO DispatcherServlet(488):? FrameworkServlet 'SpringMVC': initialization started
+   2018.05.08 18:10:16  INFO XmlWebApplicationContext(573):? Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue May 08 18:10:16 CST 2018]; parent: Root WebApplicationContext
+   2018.05.08 18:10:16  INFO XmlBeanDefinitionReader(317):? Loading XML bean definitions from class path resource [spring-mvc.xml]
+   2018.05.08 18:10:17  INFO XmlBeanDefinitionReader(317):? Loading XML bean definitions from class path resource [spring-spyMemcached.xml]
+   2018.05.08 18:10:17  INFO XmlBeanDefinitionReader(317):? Loading XML bean definitions from class path resource [spring-jms.xml]
+   2018.05.08 18:10:17 ERROR DispatcherServlet(501):? Context initialization failed
+   org.springframework.beans.factory.parsing.BeanDefinitionParsingException: Configuration problem: Failed to import bean definitions from relative location [spring-jms.xml]
+Offending resource: class path resource [spring-mvc.xml]; nested exception is org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 21 in XML document from class path resource [spring-jms.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 21; columnNumber: 80; 元素 "amq:connectionFactory" 的前缀 "amq" 未绑定。
+	at org.springframework.beans.factory.parsing.FailFastProblemReporter.error(FailFastProblemReporter.java:70)
+	at org.springframework.beans.factory.parsing.ReaderContext.error(ReaderContext.java:85)
+	at org.springframework.beans.factory.parsing.ReaderContext.error(ReaderContext.java:76)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.importBeanDefinitionResource(DefaultBeanDefinitionDocumentReader.java:255)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.parseDefaultElement(DefaultBeanDefinitionDocumentReader.java:180)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.parseBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:165)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.doRegisterBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:138)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.registerBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:94)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.registerBeanDefinitions(XmlBeanDefinitionReader.java:508)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:392)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:336)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:181)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:217)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:188)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94)
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129)
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:604)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:509)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:667)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:633)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:552)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:493)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:160)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1280)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1193)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1088)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:5176)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5460)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 21 in XML document from class path resource [spring-jms.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 21; columnNumber: 80; 元素 "amq:connectionFactory" 的前缀 "amq" 未绑定。
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:399)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:336)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.importBeanDefinitionResource(DefaultBeanDefinitionDocumentReader.java:239)
+	... 35 more
+Caused by: org.xml.sax.SAXParseException; lineNumber: 21; columnNumber: 80; 元素 "amq:connectionFactory" 的前缀 "amq" 未绑定。
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:203)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:284)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(XMLNSDocumentScannerImpl.java:284)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2784)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:112)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:841)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:770)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:243)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at org.springframework.beans.factory.xml.DefaultDocumentLoader.loadDocument(DefaultDocumentLoader.java:76)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadDocument(XmlBeanDefinitionReader.java:429)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:391)
+	... 38 more
+2018.05.08 18:20:06  INFO ContextLoader(307):? Root WebApplicationContext: initialization started
+   2018.05.08 18:20:06  INFO XmlWebApplicationContext(573):? Refreshing Root WebApplicationContext: startup date [Tue May 08 18:20:06 CST 2018]; root of context hierarchy
+   2018.05.08 18:20:07  INFO XmlBeanDefinitionReader(317):? Loading XML bean definitions from class path resource [spring-mybatis.xml]
+   2018.05.08 18:20:07  INFO PropertyPlaceholderConfigurer(172):? Loading properties file from class path resource [jdbc.properties]
+   2018.05.08 18:20:07  INFO AutowiredAnnotationBeanPostProcessor(153):? JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+   2018.05.08 18:20:08  INFO ContextLoader(347):? Root WebApplicationContext: initialization completed in 1779 ms
+   2018.05.08 18:20:08  INFO DispatcherServlet(488):? FrameworkServlet 'SpringMVC': initialization started
+   2018.05.08 18:20:08  INFO XmlWebApplicationContext(573):? Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue May 08 18:20:08 CST 2018]; parent: Root WebApplicationContext
+   2018.05.08 18:20:08  INFO XmlBeanDefinitionReader(317):? Loading XML bean definitions from class path resource [spring-mvc.xml]
+   2018.05.08 18:20:08  INFO XmlBeanDefinitionReader(317):? Loading XML bean definitions from class path resource [spring-spyMemcached.xml]
+   2018.05.08 18:20:08  INFO XmlBeanDefinitionReader(317):? Loading XML bean definitions from class path resource [spring-jms.xml]
+   2018.05.08 18:20:08 ERROR DispatcherServlet(501):? Context initialization failed
+   org.springframework.beans.factory.parsing.BeanDefinitionParsingException: Configuration problem: Failed to import bean definitions from relative location [spring-jms.xml]
+Offending resource: class path resource [spring-mvc.xml]; nested exception is org.springframework.beans.factory.parsing.BeanDefinitionParsingException: Configuration problem: Unexpected failure during bean definition parsing
+Offending resource: class path resource [spring-jms.xml]
+Bean 'pooledConnectionFactory'; nested exception is org.springframework.beans.factory.parsing.BeanDefinitionParsingException: Configuration problem: <property> element for property 'connectionFactory' must specify a ref or value
+Offending resource: class path resource [spring-jms.xml]
+Bean 'pooledConnectionFactory'
+	-> Property 'connectionFactory'
+	at org.springframework.beans.factory.parsing.FailFastProblemReporter.error(FailFastProblemReporter.java:70)
+	at org.springframework.beans.factory.parsing.ReaderContext.error(ReaderContext.java:85)
+	at org.springframework.beans.factory.parsing.ReaderContext.error(ReaderContext.java:76)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.importBeanDefinitionResource(DefaultBeanDefinitionDocumentReader.java:255)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.parseDefaultElement(DefaultBeanDefinitionDocumentReader.java:180)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.parseBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:165)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.doRegisterBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:138)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.registerBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:94)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.registerBeanDefinitions(XmlBeanDefinitionReader.java:508)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:392)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:336)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:181)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:217)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:188)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125)
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94)
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129)
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:604)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:509)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:667)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:633)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:552)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:493)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:160)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1280)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1193)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1088)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:5176)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5460)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.springframework.beans.factory.parsing.BeanDefinitionParsingException: Configuration problem: Unexpected failure during bean definition parsing
+Offending resource: class path resource [spring-jms.xml]
+Bean 'pooledConnectionFactory'; nested exception is org.springframework.beans.factory.parsing.BeanDefinitionParsingException: Configuration problem: <property> element for property 'connectionFactory' must specify a ref or value
+Offending resource: class path resource [spring-jms.xml]
+Bean 'pooledConnectionFactory'
+	-> Property 'connectionFactory'
+	at org.springframework.beans.factory.parsing.FailFastProblemReporter.error(FailFastProblemReporter.java:70)
+	at org.springframework.beans.factory.parsing.ReaderContext.error(ReaderContext.java:85)
+	at org.springframework.beans.factory.xml.BeanDefinitionParserDelegate.error(BeanDefinitionParserDelegate.java:308)
+	at org.springframework.beans.factory.xml.BeanDefinitionParserDelegate.parseBeanDefinitionElement(BeanDefinitionParserDelegate.java:562)
+	at org.springframework.beans.factory.xml.BeanDefinitionParserDelegate.parseBeanDefinitionElement(BeanDefinitionParserDelegate.java:460)
+	at org.springframework.beans.factory.xml.BeanDefinitionParserDelegate.parseBeanDefinitionElement(BeanDefinitionParserDelegate.java:429)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.processBeanDefinition(DefaultBeanDefinitionDocumentReader.java:295)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.parseDefaultElement(DefaultBeanDefinitionDocumentReader.java:186)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.parseBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:165)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.doRegisterBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:138)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.registerBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:94)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.registerBeanDefinitions(XmlBeanDefinitionReader.java:508)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:392)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:336)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.importBeanDefinitionResource(DefaultBeanDefinitionDocumentReader.java:239)
+	... 35 more
+Caused by: org.springframework.beans.factory.parsing.BeanDefinitionParsingException: Configuration problem: <property> element for property 'connectionFactory' must specify a ref or value
+Offending resource: class path resource [spring-jms.xml]
+Bean 'pooledConnectionFactory'
+	-> Property 'connectionFactory'
+	at org.springframework.beans.factory.parsing.FailFastProblemReporter.error(FailFastProblemReporter.java:70)
+	at org.springframework.beans.factory.parsing.ReaderContext.error(ReaderContext.java:85)
+	at org.springframework.beans.factory.parsing.ReaderContext.error(ReaderContext.java:80)
+	at org.springframework.beans.factory.xml.BeanDefinitionParserDelegate.error(BeanDefinitionParserDelegate.java:301)
+	at org.springframework.beans.factory.xml.BeanDefinitionParserDelegate.parsePropertyValue(BeanDefinitionParserDelegate.java:1000)
+	at org.springframework.beans.factory.xml.BeanDefinitionParserDelegate.parsePropertyElement(BeanDefinitionParserDelegate.java:894)
+	at org.springframework.beans.factory.xml.BeanDefinitionParserDelegate.parsePropertyElements(BeanDefinitionParserDelegate.java:755)
+	at org.springframework.beans.factory.xml.BeanDefinitionParserDelegate.parseBeanDefinitionElement(BeanDefinitionParserDelegate.java:547)
+	... 47 more
+2018.05.08 18:22:58  INFO ContextLoader(307):? Root WebApplicationContext: initialization started
+   2018.05.08 18:22:58  INFO XmlWebApplicationContext(573):? Refreshing Root WebApplicationContext: startup date [Tue May 08 18:22:58 CST 2018]; root of context hierarchy
+   2018.05.08 18:22:58  INFO XmlBeanDefinitionReader(317):? Loading XML bean definitions from class path resource [spring-mybatis.xml]
+   2018.05.08 18:22:58  INFO PropertyPlaceholderConfigurer(172):? Loading properties file from class path resource [jdbc.properties]
+   2018.05.08 18:22:59  INFO AutowiredAnnotationBeanPostProcessor(153):? JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+   2018.05.08 18:23:00  INFO ContextLoader(347):? Root WebApplicationContext: initialization completed in 1844 ms
+   2018.05.08 18:23:00  INFO DispatcherServlet(488):? FrameworkServlet 'SpringMVC': initialization started
+   2018.05.08 18:23:00  INFO XmlWebApplicationContext(573):? Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue May 08 18:23:00 CST 2018]; parent: Root WebApplicationContext
+   2018.05.08 18:23:00  INFO XmlBeanDefinitionReader(317):? Loading XML bean definitions from class path resource [spring-mvc.xml]
+   2018.05.08 18:23:00  INFO XmlBeanDefinitionReader(317):? Loading XML bean definitions from class path resource [spring-spyMemcached.xml]
+   2018.05.08 18:23:00  INFO XmlBeanDefinitionReader(317):? Loading XML bean definitions from class path resource [spring-jms.xml]
+   2018.05.08 18:23:00  INFO PropertyPlaceholderConfigurer(172):? Loading properties file from class path resource [spyMemcached.properties]
+   2018.05.08 18:23:00  WARN XmlWebApplicationContext(544):? Exception encountered during context initialization - cancelling refresh attempt
+   org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'targetConnectionFactory' defined in class path resource [spring-jms.xml]: Could not resolve placeholder 'activemq.host' in string value "${activemq.host}"; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'activemq.host' in string value "${activemq.host}"
+	at org.springframework.beans.factory.config.PlaceholderConfigurerSupport.doProcessProperties(PlaceholderConfigurerSupport.java:211)
+	at org.springframework.beans.factory.config.PropertyPlaceholderConfigurer.processProperties(PropertyPlaceholderConfigurer.java:222)
+	at org.springframework.beans.factory.config.PropertyResourceConfigurer.postProcessBeanFactory(PropertyResourceConfigurer.java:86)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:284)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:166)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:673)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:519)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:667)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:633)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:552)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:493)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:160)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1280)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1193)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1088)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:5176)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5460)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'activemq.host' in string value "${activemq.host}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:174)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126)
+	at org.springframework.beans.factory.config.PropertyPlaceholderConfigurer$PlaceholderResolvingStringValueResolver.resolveStringValue(PropertyPlaceholderConfigurer.java:258)
+	at org.springframework.beans.factory.config.BeanDefinitionVisitor.resolveStringValue(BeanDefinitionVisitor.java:282)
+	at org.springframework.beans.factory.config.BeanDefinitionVisitor.resolveValue(BeanDefinitionVisitor.java:204)
+	at org.springframework.beans.factory.config.BeanDefinitionVisitor.visitPropertyValues(BeanDefinitionVisitor.java:141)
+	at org.springframework.beans.factory.config.BeanDefinitionVisitor.visitBeanDefinition(BeanDefinitionVisitor.java:82)
+	at org.springframework.beans.factory.config.PlaceholderConfigurerSupport.doProcessProperties(PlaceholderConfigurerSupport.java:208)
+	... 25 more
+2018.05.08 18:23:00 ERROR DispatcherServlet(501):? Context initialization failed
+   org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'targetConnectionFactory' defined in class path resource [spring-jms.xml]: Could not resolve placeholder 'activemq.host' in string value "${activemq.host}"; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'activemq.host' in string value "${activemq.host}"
+	at org.springframework.beans.factory.config.PlaceholderConfigurerSupport.doProcessProperties(PlaceholderConfigurerSupport.java:211)
+	at org.springframework.beans.factory.config.PropertyPlaceholderConfigurer.processProperties(PropertyPlaceholderConfigurer.java:222)
+	at org.springframework.beans.factory.config.PropertyResourceConfigurer.postProcessBeanFactory(PropertyResourceConfigurer.java:86)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:284)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:166)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:673)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:519)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:667)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:633)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:552)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:493)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:160)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1280)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1193)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1088)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:5176)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5460)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'activemq.host' in string value "${activemq.host}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:174)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126)
+	at org.springframework.beans.factory.config.PropertyPlaceholderConfigurer$PlaceholderResolvingStringValueResolver.resolveStringValue(PropertyPlaceholderConfigurer.java:258)
+	at org.springframework.beans.factory.config.BeanDefinitionVisitor.resolveStringValue(BeanDefinitionVisitor.java:282)
+	at org.springframework.beans.factory.config.BeanDefinitionVisitor.resolveValue(BeanDefinitionVisitor.java:204)
+	at org.springframework.beans.factory.config.BeanDefinitionVisitor.visitPropertyValues(BeanDefinitionVisitor.java:141)
+	at org.springframework.beans.factory.config.BeanDefinitionVisitor.visitBeanDefinition(BeanDefinitionVisitor.java:82)
+	at org.springframework.beans.factory.config.PlaceholderConfigurerSupport.doProcessProperties(PlaceholderConfigurerSupport.java:208)
+	... 25 more

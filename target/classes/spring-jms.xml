@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+						http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+		  				http://www.springframework.org/schema/context
+						http://www.springframework.org/schema/context/spring-context-3.1.xsd
+						http://www.springframework.org/schema/mvc
+						http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
+	<!-- 真正可以产生Connection的ConnectionFactory，由对应的 JMS服务厂商提供 -->
+	<bean id="targetConnectionFactory" class="org.apache.activemq.ActiveMQConnectionFactory">
+		<property name="brokerURL" value="tcp://127.0.0.1:61616" /> 
+	</bean>
+	<!-- <amq:connectionFactory id="amqConnectionFactory"
+        brokerURL="tcp://192.168.88.135:8161" userName="admin" password="admin"  /> -->
+	<bean id="pooledConnectionFactory" class="org.apache.activemq.pool.PooledConnectionFactory">
+		<property name="connectionFactory" ref="targetConnectionFactory"></property>
+		<property name="maxConnections" value="10"></property>
+	</bean> 
+	<bean id="connectionFactory"
+		class="org.springframework.jms.connection.SingleConnectionFactory">
+		<property name="targetConnectionFactory" ref="pooledConnectionFactory"></property>
+	</bean>
+	<!-- 定义监听消息队列（Queue），my_mq_queue -->
+	<bean id="messageQueueDestination" class="org.apache.activemq.command.ActiveMQQueue">
+		<constructor-arg>
+			<value>my_mq_queue</value>
+		</constructor-arg>
+	</bean> 
+	<bean id="messageListener" class="com.tiger.jms.MessageListener"></bean>
+	<!-- 消息监听容器（Queue），配置连接工厂，监听的队列是queue2，监听器是上面定义的监听器 ，系统里直接使用监听 -->
+	<bean id="jmsContainer"
+		class="org.springframework.jms.listener.DefaultMessageListenerContainer">
+		<property name="connectionFactory" ref="connectionFactory"></property>
+		<property name="destination" ref="messageQueueDestination"></property>
+		<property name="messageListener" ref="messageListener"></property>
+	</bean>
+	<!-- Spring提供的JMS工具类，它可以进行消息发送、接收等 -->
+	<bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">
+		<property name="connectionFactory" ref="connectionFactory"></property>
+		<property name="defaultDestination" ref="messageQueueDestination" />
+		<!-- <property name="receiveTimeout" value="10000" /> -->
+	</bean>
+	<!--queue消息生产者 -->
+	<bean id="producterService" class="com.tiger.jms.ProducterService">
+		<property name="jmsTemplate" ref="jmsTemplate"></property>
+	</bean>
+</beans>

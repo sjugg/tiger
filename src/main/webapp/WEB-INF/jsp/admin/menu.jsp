@@ -21,10 +21,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<script language="JavaScript" src="<%=basePath%>/js/admin/menu.js" type="text/javascript"></script>
 	<link rel="stylesheet" type="text/css" href="css/admin/basic.css">
 	<link rel="stylesheet" type="text/css" href="css/admin/menu.css">
-	
-
   </head>
-  
+  <script type="text/javascript">
+		window.onload = function(){
+			showHide("items1_1");
+			showHide("items2_1");
+			showHide("items3_1");
+			showHide("items4_1");
+			showHide("items5_1");
+			showHide("items6_1");
+			showHide("items7_1");
+			}
+	</script>
   <body>
     <table class="left" cellspacing='0' cellpadding='0'>
 	  <tr>
@@ -77,8 +85,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	        </dd>
 	      </dl>
 	      <dl class='bitem'>
-	        <dt onClick='showHide("items6_1")' id='items6'><b>安全退出系统</b></dt>
+	        <dt onClick='showHide("items6_1")' id='items6'><b>通知管理</b></dt>
 	        <dd style='display:block' class='sitem' id='items6_1'>
+	          <ul class='sitemu'>
+	             <li><a href='<%=path %>/admin/admin/showNote' target='main'>通知管理</a> </li>
+	          </ul>
+	        </dd>
+	      </dl>
+	      <dl class='bitem'>
+	        <dt onClick='showHide("items7_1")' id='items7'><b>安全退出系统</b></dt>
+	        <dd style='display:block' class='sitem' id='items7_1'>
 	          <ul class='sitemu'>
 	            <li><a href='#' onClick="logout()">安全退出系统</a></li>
 	          </ul>

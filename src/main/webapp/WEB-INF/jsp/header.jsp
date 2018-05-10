@@ -31,6 +31,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     				</div>
     				<div class="header_top_text_right">
     					<ul class="main_ul">
+	    					<li class="main_li">
+		    							<a>关注微信</a>
+		    							<ul class="service">
+		    								<li class="service_1">
+		    									<img src="images/user/gzh.jpg" hight="150%" width="150%">
+		    								</li>
+		    							</ul>
+		    				</li>
     						<li class="main_li">
     							<a>客户服务</a>
     							<ul class="service">
@@ -38,7 +46,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     									<p>商务合作</p>
     									<p>18068889986</p>
     								</li>
-    								<li>在线客服</li>
+    								<li>
+    									<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=825451498&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:825451498:51" hight="100%" width="100%" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>
+    								</li>
     							</ul>
     						</li>
     						
@@ -49,10 +59,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	    						</c:when>
 	    						<c:otherwise>
 	    							<li class="main_li">
-		    							<a>我的消息</a>
-		    							<ul class="message">
+		    							<a href="user/userNote">我的消息<c:if test="${not empty noteInfo}">(1)</c:if></a>
+		    							<!-- <ul class="message">
 		    								<li>通知</li>
-		    							</ul>
+		    							</ul> -->
 		    						</li>
 		    						<li class="main_li">
 		    							<a>欢迎：${userInfo.name}</a>

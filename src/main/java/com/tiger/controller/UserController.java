@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.tiger.pojo.Building;
+import com.tiger.pojo.NoteInfo;
 import com.tiger.pojo.Strategy;
 import com.tiger.pojo.UserInfo;
 import com.tiger.service.BuildingService;
@@ -37,6 +38,16 @@ public class UserController {
 	@RequestMapping("/userHomePage")
 	public String toUserHomepage(){
 		return "/user/user/userHomePage";
+	}
+	@RequestMapping("/userNote")
+	public String userNote(HttpServletRequest request){
+		System.out.println("userNote");
+		SpyMemcachedManager spyMemcachedManager=SpyMemcachedManager.getInstance();
+		NoteInfo noteInfo=(NoteInfo) spyMemcachedManager.get("noteInfo");
+		if(noteInfo!=null){
+			request.getSession().setAttribute("noteInfo", noteInfo);
+		}
+		return "/user/user/userNote";
 	}
 	@Value("#{configProperties['memcached.expiretime']}")
 	private String expireTime;

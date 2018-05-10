@@ -39,6 +39,14 @@
     				</div>
     				<div class="header_top_text_right">
     					<ul class="main_ul">
+	    					<li class="main_li">
+	    							<a>关注微信</a>
+	    							<ul class="service">
+	    								<li class="service_1">
+	    									<img src="images/user/gzh.jpg" hight="150%" width="150%">
+	    								</li>
+	    							</ul>
+	    					</li>
     						<li class="main_li">
     							<a>客户服务</a>
     							<ul class="service">
@@ -46,8 +54,10 @@
     									<p>商务合作</p>
     									<p>18068889986</p>
     								</li>
-    								<li>在线客服</li>
-    							</ul>
+    								<li>
+    									<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=825451498&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:825451498:51" hight="100%" width="100%" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>
+    								</li>
+    								</ul>
     						</li>
     						
     						<c:choose>
@@ -57,10 +67,10 @@
 	    						</c:when>
 	    						<c:otherwise>
 	    							<li class="main_li">
-		    							<a>我的消息</a>
-		    							<ul class="message">
-		    								<li>通知</li>
-		    							</ul>
+		    							<a href="user/userNote">我的消息<c:if test="${not empty noteInfo}">(1)</c:if></a>
+		    							<!-- <ul class="message">
+		    								<li><a href="user/userNote"/>通知</li>
+		    							</ul> -->
 		    						</li>
 		    						<li class="main_li">
 		    							<a>欢迎：${userInfo.name}</a>
@@ -116,9 +126,9 @@
 		</div>
 		<div id="IndexServiceWindow">
 			<ul>
-				<li><a href="###"><img src="images/user/IndexServiceWindow_img_1.jpg" alt="" /></a></li>
-				<li><a href="###"><img src="images/user/IndexServiceWindow_img_2.jpg" alt="" /></a></li>
-				<li><a href="###"><img src="images/user/IndexServiceWindow_img_3.jpg" alt="" /></a></li>
+				<li><a target="_blank"  href="http://wpa.qq.com/msgrd?v=3&uin=825451498&site=qq&menu=yes"><img src="images/user/IndexServiceWindow_img_1.jpg" alt="" /></a></li>
+				<li><a target="_blank"  href="http://wpa.qq.com/msgrd?v=3&uin=825451498&site=qq&menu=yes"><img src="images/user/IndexServiceWindow_img_2.jpg" alt="" /></a></li>
+				<li><a href="homeDressScene/homeDressScene"><img src="images/user/IndexServiceWindow_img_3.jpg" alt="" /></a></li>
 			</ul>
 		</div>
 		<div id="quotationShow" style="display:none;">

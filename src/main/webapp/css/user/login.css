@@ -206,7 +206,18 @@
 	font-size:18px;
 }
 
-
+.note_input{
+	width:48%;
+	height:42px;
+	line-height:63px;
+	-webkit-border-radius:5px; 
+	-moz-border-radius:5px; 
+	-ms-border-radius:5px;
+	border-radius:5px;
+	border:2px solid #e2e2e2;
+	font-size:20px;
+	padding:0 2%;
+}
 
 
 
