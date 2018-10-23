@@ -14,6 +14,8 @@
 			<list>
 				<value>classpath:spyMemcached.properties</value>
 				<value>classpath:activemq.properties</value>
+				<value>classpath:redis.properties</value>
+				<value>classpath:config.properties</value>
 			</list>
 		</property>
 	</bean>

@@ -22,7 +22,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<script type="text/javascript">
 		window.onload = function(){
 			//中午乱码问题
-			window.location.href="/toIndex?city="+encodeURIComponent(remote_ip_info.city)+"&province="+encodeURIComponent(remote_ip_info.province);
+/* 			window.location.href="/toIndex?city="+encodeURIComponent(remote_ip_info.city)+"&province="+encodeURIComponent(remote_ip_info.province);
+ */		
+			window.location.href="/toIndex?city=Shanghai&province=Shanghai";
 		}
 	</script>
   </head>

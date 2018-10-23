@@ -1,6 +1,8 @@
 package com.tiger.controller;
 
 import java.io.IOException;
+import java.io.Serializable;
+import java.util.Collections;
 import java.util.List;
 
 import javax.annotation.Resource;
@@ -10,10 +12,16 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
+
+import redis.clients.jedis.Jedis;
+import redis.clients.jedis.JedisPoolConfig;
 
 import com.tiger.pojo.Building;
 import com.tiger.pojo.NoteInfo;
@@ -23,6 +31,8 @@ import com.tiger.service.BuildingService;
 import com.tiger.service.StrategyService;
 import com.tiger.service.UserInfoService;
 import com.tiger.service.impl.UserInfoServiceImpl;
+import com.tiger.utils.EmailSender;
+import com.tiger.utils.RedisCacheConfig;
 import com.tiger.utils.SpyMemcachedManager;
 
 
@@ -31,6 +41,20 @@ import com.tiger.utils.SpyMemcachedManager;
 public class UserController {
 	@Autowired
 	private UserInfoServiceImpl userInfoService;
+	@Resource
+	private RedisTemplate<Serializable, Serializable> redisTemplate;
+	@Resource
+	private JedisPoolConfig jedisConfig;
+	@Resource
+	private JavaMailSenderImpl javaMailSender;
+	
+	/*public RedisTemplate<Serializable, Serializable> getRedisTemplate() {
+		return redisTemplate;
+	}
+	public void setRedisTemplate(
+			RedisTemplate<Serializable, Serializable> redisTemplate) {
+		this.redisTemplate = redisTemplate;
+	}*/
 	@RequestMapping("/userInfo")
 	public String toLogin(){
 		return "/user/user/userInfo";
@@ -54,7 +78,14 @@ public class UserController {
 	@RequestMapping("/login")
 	public void login(String tel,String password,Model model,HttpServletResponse response,HttpServletRequest request) throws IOException{
 		SpyMemcachedManager spyMemcachedManager=SpyMemcachedManager.getInstance();
-		UserInfo memory=(UserInfo) spyMemcachedManager.get(tel);
+//		UserInfo memory=(UserInfo) spyMemcachedManager.get(tel);
+		UserInfo memory=null;
+		Object obj=redisTemplate.opsForValue().get(tel);
+		if(obj!=null){
+		 memory=(UserInfo) obj;
+		}
+		System.out.println(javaMailSender.getHost());
+		System.out.println(javaMailSender.getUsername());
 		UserInfo userInfo;
 		if(memory==null){
 			System.out.println("缓存中没有找到客户信息");
@@ -63,6 +94,7 @@ public class UserController {
 			userInfo.setTel(tel);
 			userInfo=userInfoService.getByPdAndTel(userInfo);
 			if(userInfo!=null){
+				redisTemplate.opsForValue().set(tel, userInfo);
 				//设置缓存时间为10分钟
 				SpyMemcachedManager.set(tel, Integer.parseInt(expireTime), userInfo);
 			}

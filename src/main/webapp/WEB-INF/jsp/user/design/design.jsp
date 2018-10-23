@@ -27,9 +27,53 @@
 <script type="text/javascript" charset="utf-8" src="<%=basePath%>js/jquery.leanModal.min.js"></script>
 <script language="JavaScript" src="<%=basePath%>/js/basic.js" type="text/javascript"></script>
 <script language="JavaScript" src="<%=basePath%>/js/user/design.js" type="text/javascript"></script>
-	
+<link rel="stylesheet" type="text/css" href="css/user/sweet-alert.css">	
+<script language="JavaScript" src="<%=basePath%>/js/user/sweetAlert/js/sweet-alert.min.js" type="text/javascript"></script>
 </head>
-
+	<script type="text/javascript">
+  		$(function() {
+		$('#orderBotton').click(function() {
+			var tel = $('input[name="designbespeakTel"]').val();
+			var name = $('input[name="designbespeakUsername"]').val();
+			$.ajax({
+				url:"/designOrder",
+				data:{
+					tel: tel,
+					name: name
+				},
+				dataType:"JSON",
+				type:"POST",
+				success:function(data) {
+					if(data===1) {
+						swal({
+							title: "温馨提示!",
+		                    text: "预约成功!",
+		                    type: "success",
+		                    confirmButtonText: "关 闭"
+						},function() {
+							window.location.href="/design";
+						});
+					}else if(data===0) {
+						swal({
+							title: "温馨提示!",
+		                    text: "该手机号已经预约过，无需再约!",
+		                    type: "warning",
+		                    confirmButtonText: "关 闭"
+						});
+					} else {
+						swal({
+							title: "温馨提示!",
+		                    text: "预约失败!",
+		                    type: "error",
+		                    confirmButtonText: "关 闭"
+						});
+					}
+				}
+			});
+		});
+	});
+  		
+  	</script>
 <body>
 <div id="designShow" style="display:none;"> 
 	<iframe src="designShow" id="designShowIframe" width="100%" height="529" frameborder="0" scrolling="no"></iframe>
@@ -62,7 +106,7 @@
 					<form action="/designbespeak" method="post" onsubmit="return checkForm()">
 						<input class="name" onFocus="if (this.value == '请输入您的姓名') {this.value = '';}" onBlur="if (this.value == '') {this.value = '请输入您的姓名';}" type="text" name="designbespeakUsername" value="请输入您的姓名" /> <input
 							class="tel"  onFocus="if (this.value == '请输入您的手机号码') {this.value = '';}" onBlur="if (this.value == '') {this.value = '请输入您的手机号码';}" type="text" name="designbespeakTel" value="请输入您的手机号码" /> <input
-							class="submit" type="submit" value="立即预约" />
+							class="submit" id="orderBotton" value="立即预约" />
 					</form>
 				</div>
 				

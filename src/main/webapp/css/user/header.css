@@ -112,11 +112,11 @@ a{
 	top:-17px;
 	left:80px;
 	z-index:99999;
-	background:url("../../images/user/down.png") no-repeat;
+	/* background:url("../../images/user/down.png") no-repeat; */
 	display:block;
 }
 .header_top_text_right .main_ul .main_li:hover .ico{
-	background:url("../../images/user/up.png") no-repeat;
+	/* background:url("../../images/user/up.png") no-repeat; */
 	top:-76px;
 }
 

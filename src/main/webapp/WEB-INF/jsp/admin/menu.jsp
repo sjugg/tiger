@@ -96,7 +96,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	        <dt onClick='showHide("items7_1")' id='items7'><b>安全退出系统</b></dt>
 	        <dd style='display:block' class='sitem' id='items7_1'>
 	          <ul class='sitemu'>
-	            <li><a href='#' onClick="logout()">安全退出系统</a></li>
+	            <!-- <li><a href='#' onClick="logout()">安全退出系统</a></li> -->
+	            <li><a href='<%=path %>/j_spring_security_logout'  target='_parent'>安全退出系统</a></li>
 	          </ul>
 	        </dd>
 	      </dl>

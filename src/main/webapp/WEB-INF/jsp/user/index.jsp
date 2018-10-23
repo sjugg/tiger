@@ -27,10 +27,136 @@
 		<script language="JavaScript" src="<%=basePath%>/js/user/index.js" type="text/javascript"></script>
 	<link href="css/user/header.css" rel="stylesheet" type="text/css" />
 	<script type="text/javascript" src="js/user/header.js"></script>
+	<script language="JavaScript" src="<%=basePath%>/js/user/sweetAlert/js/sweet-alert.min.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="css/user/sweet-alert.css">
+	<style>
+		#dialoginput{
+			width: 58%;
+		    height: 40px;
+		    line-height: 40px;
+		    border: none;
+		    border-radius: 5px;
+		    margin-left: 5%;
+		    padding: 2px 5%;
+		}
+		/* background-repeat: round; */
+		#dialog {
+		    background-image: url(images/user/bak.jpg);
+    		background-repeat: repeat-x;
+   			background-size: 93%;
+			height:23%;
+			left:1%;
+			margin:-2% 20% 0 20%px;
+			padding:1px;
+			position:fixed !important; /* 浮动对话框 */
+			position:absolute;
+			top:75%;
+			width:98%;
+			z-index:5;
+			border-radius:5px;
+			display:none;
+		}
+		#dialog a{
+		color:#ffffff;font-size:21px;
+		text-align:right;
+		margin-left: 95%;
+		font-weight:bold;
+		}
+		#dialog p {
+		margin:0 0 12px;
+		height:24px;
+		line-height:24px;
+		background:#CCCCCC;
+		}
+		#dialog p.close {
+		text-align:right;
+		padding-right:10px;
+		}
+	</style>
+	<script>
+	$(document).ready(function(){
+	 showBg();
+	});
+	</script>
+	<script type="text/javascript">
+	//显示灰色 jQuery 遮罩层
+	function showBg() {
+	  var bh = $("body").height();
+	  var bw = $("body").width();
+	  $("#fullbg").css({
+	    height:bh,
+	    width:bw,
+	    display:"block"
+	  });
+	 $("#dialog").show();
+	}
+	//关闭灰色 jQuery 遮罩
+	function closeBg() {
+	$("#fullbg,#dialog").hide();
+	}
+	$(function() {
+		$('#orderBotton').click(function() {
+			var tel = $('input[name="tel"]').val();
+			var name = $('input[name="name"]').val();
+			if("请输入您的姓名"==name){
+				swal({
+					title: "温馨提示!",
+                    text: "请输入姓名!",
+                    type: "warning",
+                    confirmButtonText: "关 闭"
+				});
+				return false;
+			}
+			if("请输入您的电话号码"==tel){
+				swal({
+					title: "温馨提示!",
+                    text: "请输入电话号码!",
+                    type: "warning",
+                    confirmButtonText: "关 闭"
+				});
+				return false;
+			}
+			$.ajax({
+				url:"/homeDressScene/order",
+				data:{
+					tel: tel,
+					name: name
+				},
+				dataType:"JSON",
+				type:"POST",
+				success:function(data) {
+					if(data===1) {
+						swal({
+							title: "温馨提示!",
+		                    text: "预约成功!",
+		                    type: "success",
+		                    confirmButtonText: "关 闭"
+						},function() {
+							closeBg();
+						});
+					}else if(data===0) {
+						swal({
+							title: "温馨提示!",
+		                    text: "该手机号已经预约过，无需再约!",
+		                    type: "warning",
+		                    confirmButtonText: "关 闭"
+						});
+					} else {
+						swal({
+							title: "温馨提示!",
+		                    text: "预约失败!",
+		                    type: "error",
+		                    confirmButtonText: "关 闭"
+						});
+					}
+				}
+			});
+		});
+	});
+	</script>
+</head>
 	</head>
-	
 	<body>
-	
 		<div class="header">
     		<div class="header_top">
     			<div class="header_top_text">
@@ -39,6 +165,8 @@
     				</div>
     				<div class="header_top_text_right">
     					<ul class="main_ul">
+    					<li class="main_li empty"><a href="/j_spring_security_logout" >后台退出</a></li>
+    					<li class="main_li empty"><a href="/admin/index" >后台入口</a></li>
 	    					<li class="main_li">
 	    							<a>关注微信</a>
 	    							<ul class="service">
@@ -115,6 +243,35 @@
     			</div>
     		</div>
 		</div>
+		<!-- 加载默认的弹出框 -->
+		<div>
+		<div id="dialog">
+			<div>
+				<a href="#" rel="external nofollow" onclick="closeBg();">关闭</a>
+				<div>
+					<input name="name" value="请输入您的姓名"
+						onfocus="if (this.value == '请输入您的姓名') {this.value = '';}"
+						onblur="if (this.value == '') {this.value = '请输入您的姓名';}"
+						style="width: 10%; height: 28px; line-height: 40px; border: none; border-radius: 9px; margin-left: 48%; padding: 2px 4%;"></input>
+				</div>
+				<div>&nbsp;</div>
+				<div>
+					<input name="tel" value="请输入您的电话号码"
+						onfocus="if (this.value == '请输入您的电话号码') {this.value = '';}"
+						onblur="if (this.value == '') {this.value = '请输入您的电话号码';}"
+						style="width: 10%; height: 28px; line-height: 40px; border: none; border-radius: 9px; margin-left: 48%; padding: 2px 4%;"></input>
+					<img src="images/user/kf.png"
+						style="width: 6%; float: right; margin-right: 10%; margin-top: -4%;"
+						alt=""  onclick='window.open("http://wpa.qq.com/msgrd?v=3&uin=825451498&site=qq&menu=yes")'/>
+				</div>
+				<div>
+					<img src="images/user/bt.png" id="orderBotton"
+						style="width: 12%; float: right; margin-right: 3%; margin-top: -3%;"
+						alt="" />
+				</div>
+			</div>
+		</div>
+	</div>
 	<!-- head end  -->
 		<div id="userFeedBack" style="display:none;"> 
 			<iframe src="userFeedBack" id="userFeedBackIframe" width="100%" height="529" frameborder="0" scrolling="no"></iframe>

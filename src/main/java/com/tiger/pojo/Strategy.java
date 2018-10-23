@@ -1,6 +1,8 @@
 package com.tiger.pojo;
 
-public class Strategy {
+import java.io.Serializable;
+
+public class Strategy implements Serializable {
     private Integer strategyId;
 
     private String strategyName;

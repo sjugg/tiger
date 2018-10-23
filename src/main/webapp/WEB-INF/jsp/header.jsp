@@ -31,6 +31,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     				</div>
     				<div class="header_top_text_right">
     					<ul class="main_ul">
+    					<li class="main_li empty"><a href="/j_spring_security_logout" >后台退出</a></li>
+    					<li class="main_li empty"><a href="/admin/index" >后台入口</a></li>
 	    					<li class="main_li">
 		    							<a>关注微信</a>
 		    							<ul class="service">
@@ -70,7 +72,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		    								<li><a href="user/userHomePage"/>我的中心</li>
 		    								<li><a href="user/logout?tel=${userInfo.tel}"/>退出</li>
 		    							</ul>
-		    							<span class="ico"></span>
 		    						</li>
 	    						</c:otherwise>
     						</c:choose>

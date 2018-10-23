@@ -26,9 +26,54 @@
 	<script language="JavaScript" src="<%=basePath%>/js/basic.js" type="text/javascript"></script>
 	<script language="JavaScript" src="<%=basePath%>/js/user/classicCase.js"
 		type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="css/user/sweet-alert.css">	
+	<script language="JavaScript" src="<%=basePath%>/js/user/sweetAlert/js/sweet-alert.min.js" type="text/javascript"></script>
 
 </head>
-
+	<script type="text/javascript">
+  		$(function() {
+		$('#orderBotton').click(function() {
+			var tel = $('input[name="tel"]').val();
+			var name = $('input[name="name"]').val();
+			$.ajax({
+				url:"/classicOrder",
+				data:{
+					tel: tel,
+					name: name
+				},
+				dataType:"JSON",
+				type:"POST",
+				success:function(data) {
+					if(data===1) {
+						swal({
+							title: "温馨提示!",
+		                    text: "预约成功!",
+		                    type: "success",
+		                    confirmButtonText: "关 闭"
+						},function() {
+							window.location.href="/index";
+						});
+					}else if(data===0) {
+						swal({
+							title: "温馨提示!",
+		                    text: "该手机号已经预约过，无需再约!",
+		                    type: "warning",
+		                    confirmButtonText: "关 闭"
+						});
+					} else {
+						swal({
+							title: "温馨提示!",
+		                    text: "预约失败!",
+		                    type: "error",
+		                    confirmButtonText: "关 闭"
+						});
+					}
+				}
+			});
+		});
+	});
+  		
+  	</script>
 <body>
 
 	<div id="userFeedBack" style="display:none;"> 
@@ -126,9 +171,9 @@
 				<p>我家按此效果装修多少钱？</p>
 				<form action="" method="post">
 					<input type="hidden" name="Id" value="${classic.classiccaseId }"/>
-					<input type="text" class="text name" value="请输入您的姓名"/>
-					<input type="text" class="text tel" value="请输入您的手机号码"/>
-					<input type="submit" class="text submit" value="立即预约"/>
+					<input type="text" class="text name" name="name" onFocus="if (this.value == '请输入您的姓名') {this.value = '';}" onBlur="if (this.value == '') {this.value = '请输入您的姓名';}" value="请输入您的姓名"/>
+					<input type="text" class="text tel" name="tel"  onFocus="if (this.value == '请输入您的手机号码') {this.value = '';}" onBlur="if (this.value == '') {this.value = '请输入您的手机号码';}" value="请输入您的手机号码"/>
+					<input id="orderBotton" class="text submit" value="立即预约"/>
 				</form>
 			</div>
 		

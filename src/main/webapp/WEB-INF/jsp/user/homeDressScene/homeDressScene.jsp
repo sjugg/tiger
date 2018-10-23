@@ -80,7 +80,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<iframe allowTransparency="true" frameborder="no" border="0" scrolling="no" width=100% height=110 src="header"></iframe>
 		</div> -->
 		<jsp:include   page="../../header.jsp" flush="true"/>
+		
 		<div id="body">
+		
 			<div class="homeDressScene_top_photo">
 				<img alt="" src="images/user/homwDresssScene_top_photo_img.jpg"/>
 				<div class="homeDressScene_top_photo_form">
@@ -239,6 +241,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						<div class="center"><a href="##">查看<<</a></div>
 						<div class="right"></div>
 					</div>
+					<iframe allowTransparency="true" frameborder="no" border="0" scrolling="no" width=100% height=300 src="https://mapi.alipay.com/gateway.do?_input_charset=UTF-8&currency=HKD&notify_url=http://msc.koolyun.cn:8080/msc-receiver/alipayoversea/notify&order_gmt_create=2018-05-25 14:12:03&order_valid_time=36000&out_trade_no=1527228723888&partner=2088131118506275&payment_inst=ALIPAYCN&product_code=NEW_WAP_OVERSEAS_SELLER&qr_pay_mode=4&qrcode_width=200&secondary_merchant_id=A80001&secondary_merchant_industry=7011&secondary_merchant_name=muku&service=create_forex_trade&sign=ae57cbeaa21c12fc0e6af29ea5763871&sign_type=MD5&subject=iphone6&total_fee=0.01"></iframe>
 				</div>
 			</div>
 		</div>

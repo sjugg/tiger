@@ -3,17 +3,22 @@ package com.tiger.controller;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import javax.annotation.Resource;
 import javax.imageio.ImageIO;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,6 +31,7 @@ import com.tiger.pojo.Classiccase;
 import com.tiger.pojo.Design;
 import com.tiger.pojo.Designbespeak;
 import com.tiger.pojo.Designoffer;
+import com.tiger.pojo.HomeDress;
 import com.tiger.pojo.NoteInfo;
 import com.tiger.pojo.Quoedprice;
 import com.tiger.pojo.Strategy;
@@ -40,7 +46,11 @@ import com.tiger.service.DesignofferService;
 import com.tiger.service.QuoedpriceService;
 import com.tiger.service.StrategyService;
 import com.tiger.service.UserInfoService;
+import com.tiger.service.impl.HomeDressServiceImpl;
 import com.tiger.utils.CaptchaUtil;
+import com.tiger.utils.EmailSender;
+import com.tiger.utils.JDKProxy;
+import com.tiger.utils.SimpleEmail;
 import com.tiger.utils.SpyMemcachedManager;
 
 
@@ -67,26 +77,96 @@ public class IndexController {
 	private AcmedecorationService acmedecorationService;
 	@Autowired
 	private UserInfoService userInfoService;
+	@Autowired
+	private HomeDressServiceImpl homeDressServiceImpl;
+	@Autowired
+	private ThreadPoolTaskExecutor executor;
+	
 	@Value("#{configProperties['memcached.expiretime']}")
 	private Integer expireTime;
 	
+	final Logger logger = LoggerFactory.getLogger(IndexController.class);
+	@RequestMapping("/designOrder")
+	public void designOrder(String tel,String name,HttpServletResponse response,Model model){
+		try {
+			HomeDress homeDress = homeDressServiceImpl.getbyTel(tel);
+			if (homeDress == null) {
+				homeDress = new HomeDress();
+				homeDress.setTel(tel);
+				homeDress.setName(name);
+				homeDressServiceImpl.addAdmin(homeDress);
+				//Send(name, tel);
+				//预约成功
+				response.getWriter().print(1);
+			} else {
+				//该号码已经预约过
+				response.getWriter().print(0);
+			}
+		} catch (Exception e) {
+			//异常情况下，预约失败
+			try {
+				response.getWriter().print(2);
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			e.printStackTrace();
+		}
+	}
+	@RequestMapping("/classicOrder")
+	public void classicOrder(String tel,String name,HttpServletResponse response,Model model){
+		try {
+			HomeDress homeDress = homeDressServiceImpl.getbyTel(tel);
+			if (homeDress == null) {
+				homeDress = new HomeDress();
+				homeDress.setTel(tel);
+				homeDress.setName(name);
+				homeDressServiceImpl.addAdmin(homeDress);
+				//Send(name, tel);
+				//预约成功
+				response.getWriter().print(1);
+			} else {
+				//该号码已经预约过
+				response.getWriter().print(0);
+			}
+		} catch (Exception e) {
+			//异常情况下，预约失败
+			try {
+				response.getWriter().print(2);
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			e.printStackTrace();
+		}
+	}
 	/**
 	 * 转存当前登录城市信息
 	 * @param request
 	 * @return
 	 */
+	@SuppressWarnings("deprecation")
 	@RequestMapping("/toIndex")
 	public String toIndex(HttpServletRequest request){
+		logger.info("-------------------------------");
+		//首页线程池控制并发访问数
+		executor.execute(new Runnable() {
+			@Override
+			public void run() {
+			}
+		});
 		try {
 			String city = new String(request.getParameter("city").getBytes("ISO8859-1"),"UTF-8");
 			String province = new String(request.getParameter("province").getBytes("ISO8859-1"),"UTF-8");
+			city=request.getParameter("city");
+			province=request.getParameter("province");
 			if(StringUtils.isNotEmpty(city)){
 				request.getSession().putValue("city", city);
 			}
 			if(StringUtils.isNotEmpty(province)){
 				request.getSession().putValue("province", province);
 			}
-			System.out.println("当前城市："+city);
+			logger.info("当前登录城市："+province+"省 "+city+"市");
 			SpyMemcachedManager spyMemcachedManager=SpyMemcachedManager.getInstance();
 			NoteInfo noteInfo=(NoteInfo) spyMemcachedManager.get("noteInfo");
 			if(noteInfo!=null){
@@ -96,6 +176,7 @@ public class IndexController {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
 		return "/index";
 	}
 	@RequestMapping("/checkCode")
@@ -116,13 +197,17 @@ public class IndexController {
 	}
 	@RequestMapping("/index")
 	public String index(HttpServletRequest request,Model model){
-		List<Strategy> strategyList = this.strategyService.getAllStrategy();
-		model.addAttribute("strategyList", strategyList);
 		SpyMemcachedManager spyMemcachedManager=SpyMemcachedManager.getInstance();
+		List<Strategy> strategyList =(List<Strategy>) spyMemcachedManager.get("strategyList");
+		if(strategyList==null){
+			strategyList = this.strategyService.getAllStrategy();
+			JDKProxy handler=new JDKProxy(strategyService);
+			SpyMemcachedManager.set("classiccaseList", expireTime, strategyList);
+		}
+		model.addAttribute("strategyList", strategyList);
 		List<Building> buildingList =(List<Building>) spyMemcachedManager.get("buildingList");
 		if(buildingList==null){
 			buildingList = this.buildingService.getAllBuilding();
-			System.out.println("往cache中放 buildingList");
 			SpyMemcachedManager.set("buildingList", expireTime, buildingList);
 		}
 		model.addAttribute("buildingList", buildingList);
@@ -131,7 +216,6 @@ public class IndexController {
 		List<Classiccase> Classiccase =(List<Classiccase>) spyMemcachedManager.get("classiccaseList");
 		if(Classiccase==null){
 			Classiccase = this.classiccaseService.getAllClassiccaseIndex();
-			System.out.println("往cache中放 buildingList");
 			SpyMemcachedManager.set("classiccaseList", expireTime, Classiccase);
 		}
 		model.addAttribute("classiccaseList", Classiccase);
@@ -174,6 +258,7 @@ public class IndexController {
 		this.designbespeakService.addDesignbespeak(designbespeak);
 		return "redirect:/design";
 	}
+	
 	@RequestMapping("/designoffer")
 	public String toDesignoffer(Designoffer designoffer,HttpServletRequest request,Model model){
 		this.designofferService.addDesignoffer(designoffer);
@@ -276,7 +361,18 @@ public class IndexController {
         results.put("totalCost",totalCost );
 		return results;
 	}
- 	
+	//自定义404
+	@RequestMapping("/notFound")
+    public String test2(){
+          System.out.println("404 not found...");
+          return "/user/404";
+    }
+	//自定义403
+		@RequestMapping("/accessDenied")
+	    public String accessDenied(){
+	          System.out.println("403 access denied...");
+	          return "/user/403";
+	    }
 	//用户反馈
 	@RequestMapping("/userFeedBack")
 	public String toUserfeedBack(){

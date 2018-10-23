@@ -4,6 +4,8 @@ package com.tiger.service.impl;
 import java.util.List;
 
 import javax.annotation.Resource;
+
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import com.tiger.dao.BuildingDao;
@@ -20,7 +22,7 @@ public class BuildingServiceImpl implements BuildingService {
     	// TODO Auto-generated method stub
     	return this.BuildingDao.selectByPrimaryKey(buildingId);
 	}
-	
+	@Cacheable("getAllBuilding")
 	@Override
 	public List<Building> getAllBuilding() {
     	// TODO Auto-generated method stub
