@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+            http://www.springframework.org/schema/aop 
+            http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+            http://www.springframework.org/schema/context 
+            http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+	<!--使Spring支持自动检测组件，如注解的Controller -->
+	<context:component-scan base-package="com.tiger.utils.AspectJUtil" />
+	<!--*************** 支持aop 
+	proxy-target-class="true"和
+	proxy-target-class="false"的区别，
+	为true则是基于类的代理将起作用（需要cglib库），
+	为false或者省略这个属性，则标准的JDK 
+	基于接口的代理将起作用。**************** -->
+	<aop:aspectj-autoproxy/>
+
+</beans>
